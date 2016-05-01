@@ -9,8 +9,19 @@ angular.module('app', [
     'app.controllers'
 ])
 
-.config(['$stateProvider', '$urlRouterProvider', 'ngDialogProvider', 
-  function($stateProvider, $urlRouterProvider, ngDialogProvider) {
+.config(['$stateProvider', '$urlRouterProvider', 'ngDialogProvider', 'RestangularProvider',
+  function($stateProvider, $urlRouterProvider, ngDialogProvider, RestangularProvider) {
+  RestangularProvider.setBaseUrl('https://sahara-health-api.herokuapp.com/');
+
+  RestangularProvider.addResponseInterceptor(function (data, operation, what, url, response, deferred) {
+      if (data.response && data.response.data) {
+          var returnedData = data.response.data;
+          return returnedData;
+      } else {
+          return data;
+      };
+  });
+  
   $stateProvider
     .state('home', {
     url: '',

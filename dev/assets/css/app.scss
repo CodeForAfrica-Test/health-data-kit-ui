@@ -1,23 +1,31 @@
 //Utilities
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+}
 
 .b {
 	border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .m-t {
-    margin-top: 15px
+    margin-top: 15px !important;
 }
 
 .m-t-md {
-    margin-top: 21px;
+    margin-top: 21px !important;
 }
 
 .m-t-sm {
-    margin-top: 5px;
+    margin-top: 5px !important;
 }
 
 .m-t-lg {
-    margin-top: 30px;
+    margin-top: 30px !important;
+}
+
+.m-b-lg {
+    margin-bottom: 30px;
 }
 
 .m-t-l {
@@ -53,9 +61,16 @@
     padding-right: 200px;
 }
 
+@media only screen and (max-width: 320px) {
+	.wrapper-xxl {
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+}
+
 hr {
-	margin: 0;
-	margin-bottom: 15px;
+	margin: 0 !important;
+	margin-bottom: 15px !important;
 	border-color: #DEE5E7;
 }
 
@@ -77,7 +92,7 @@ hr {
 	min-height: 100px;
 	color: grey;
 
-	div {
+	.div {
 		min-height: 100px;
 		padding-top: 15px;
 		padding-left: 30px;
@@ -92,13 +107,17 @@ hr {
 			background: rgba(255,255,255,0.95);
 			top: 0;
 			left: 0;
-			padding-top: 30px;
+			padding: 20px;
 
 			p {
+				margin: 0;
+				margin-bottom: 10px;
 				font-size: 13px;
+				line-height: 10px !important;
 			}
 
 			h5 {
+				margin: 0 !important;
 				font-size: 15px;
 				color: rgba(0,0,0,0.8);
 				margin: 0;
@@ -107,6 +126,7 @@ hr {
 			h6 {
 				text-decoration: underline;
 				cursor: pointer;
+				margin: 0 !important;
 			}
 			
 			.badge {
@@ -115,22 +135,35 @@ hr {
 				font-weight: normal;
 				color: #fff;
 				padding: 5px;
+				margin-bottom: 10px;
 				border: 0;
 				background: #2D91D9;
 			}
 		}
 	}
 
+	@media only screen and (max-width: 320px) {
+		.div {
+		    border-right: none;
+		}
+	}
+
+	@media only screen and (max-width: 1024px) {
+		
+	}
+
 	h4 {
 		font-size: 17px;
-		color: rgba(0,0,0,0.8)
+		color: rgba(0,0,0,0.8) !important;
+		
 	}
 
 	p {
 		font-size: 10px;
 		font-weight: bold;
 		letter-spacing: 0.06;
-		color: rgba(0,0,0,0.36)
+		color: rgba(0,0,0,0.36);
+		line-height: 5px;
 	}
 
 	.input {
@@ -142,7 +175,9 @@ hr {
 		font-size: 12px;
 		letter-spacing: 1px;
 		font-weight: lighter;
-		outline: none;
+		outline: none !important;
+		margin: 0; 
+		background: none;
 	}
 
 	.btn {
@@ -155,5 +190,49 @@ hr {
 		background: #43BEA7;
 		border: 0;
 		border-radius: 3px;
+	}
+
+	select {
+		margin-top: 9px !important;
+		color: grey;
+	}
+
+	.select-wrapper {
+		padding: 0;
+		margin-bottom: 0;
+
+		.select-wrapper-inner {
+			display: none;
+
+			&:hover {
+				background: none;
+			}
+		}
+
+	}
+}
+
+.result {
+	position: absolute;
+	z-index: 9999;
+	border: 1px solid #DEE5E7;
+	background: #fff;
+	width: 80%;
+
+	li {
+		list-style: none;
+		color: rgba(0,0,0,0.36);
+		padding: 5px;
+		font-size: 10px;
+		font-weight: bold;
+		letter-spacing: 0.06;
+		border-bottom: 1px solid #DEE5E7;
+		cursor: pointer;
+
+		&:hover {
+			background: #43BEA7;
+			color: #fff;
+			font-weight: 400;
+		}
 	}
 }
