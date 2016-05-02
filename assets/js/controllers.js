@@ -18,6 +18,7 @@ angular.module('app.controllers', [])
             $scope.searching = true;
             Restangular.one('doctor/search').get({name: $scope.doctorName}).then(function(response){
                 $scope.results = response;
+                console.log(response)
              }, function(error){
                 $scope.error = error;
             });
@@ -41,7 +42,7 @@ angular.module('app.controllers', [])
 .controller('medicineFinderCtrl', function($scope, Restangular) {
 	Restangular.all('medicine').getList().then(function(response) {
 		$scope.medicine = response;
-		// console.log(response.plain())
+		console.log(response.plain())  
 	})
 
 	var inputMin = 3;
