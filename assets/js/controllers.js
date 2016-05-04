@@ -42,7 +42,7 @@ angular.module('app.controllers', [])
 .controller('medicineFinderCtrl', function($scope, Restangular) {
 	Restangular.all('medicine').getList().then(function(response) {
 		$scope.medicine = response;
-		console.log(response.plain())  
+		// console.log(response.plain())  
 	})
 
 	var inputMin = 3;
@@ -74,16 +74,52 @@ angular.module('app.controllers', [])
 	}
 })
 
-.controller('hospitalFinderCtrl', function($scope, Restangular) {
-	// Restangular.all('hospital').getList().then(function(response) {
-	// 	$scope.hospitals = response;
-	// 	console.log(response)
-	// })
-	$scope.showDetail = function() {
-		$scope.detail = true;
+.controller('hospitalFinderCtrl', function($scope, Restangular, $http) {
+	Restangular.all('hospital').getList().then(function(response) {
+		$scope.hospitals = response;
+		// console.log(response)
+	})
+
+	$scope.search = function() {
+	    	var address = $scope.hospital.name
+			var inputMin = 3;
+			
+	    	if ($scope.hospital.name && $scope.hospital.name.length >= inputMin) {
+	            // $scope.searching = true;
+			    $http({
+			        method: 'GET',
+			        url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
+			                         address + '&key=AIzaSyCq_hPKdxEybYoangnVh1Fs_ARyjnmdSqs',
+
+			        transformRequest: function(data, headersGetter) {
+			            var headers = headersGetter();
+
+			            delete headers['Authorization'];
+
+			            return headers;
+			        }
+			    }).then(function(results){
+			    	$scope.searching = true;
+			    	$scope.results = results.data.results;
+		        	console.log(results)
+				})
+	        } else {
+               $scope.searching = false;
+          } 	   
+	    }
+
+	$scope.addLocation = function(result) {
+		$scope.hospital.name = result.formatted_address;
+		$scope.hospital.latitude = result.geometry.location.lat;
+		$scope.hospital.longitude = result.geometry.location.lng;
+		// console.log(result.formatted_address);
+		$scope.searching = false;
 	}
 
-	$scope.close = function() {
-		$scope.detail = false;
+	$scope.showDetail = function() {
+		$scope.load = true;
+		Restangular.all('hospital/search').post($scope.hospital).then(function(response) {
+			console.log(response);
+		})
 	}
 })
