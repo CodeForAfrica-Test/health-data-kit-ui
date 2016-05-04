@@ -8,7 +8,7 @@
 // modules
 console.log('starting server')
 var static = require( 'node-static' ),
-    port = 8080,
+    port =  process.env.PORT || 8080,
     http = require( 'http' );
 
 // config
