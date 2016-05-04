@@ -61,8 +61,7 @@
 			<div class="div col-md-4 m-n" ng-controller="hospitalFinderCtrl">
 				<h4>Hospital Finder</h4>
 				<hr/>
-				<input type="text" placeholder="Location" class="input" ng-model="location"></input>
-				<select class="input">
+				<select class="input" ng-model="hospital.service">
 					<option value="">Choose a service</option>
 					<option value="Maternal health delivery">Maternal health delivery</option>
 					<option value="Ambulance">Ambulance</option>
@@ -73,7 +72,16 @@
 					<option value="Family planning">Family planning</option>
 					<option value="Malaria treatment">Malaria treatment</option>
 				</select>
-				<button class="btn btn-primary m-t" ng-click="showDetail()">Search</button>
+				<input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()"></input>
+				<div class="col-md-10 result m-t no-padder" ng-show="searching">
+					<li ng-repeat="result in results" ng-click="addLocation(result)">
+						{{result.formatted_address}}
+					</li>
+				</div>
+				<button class="btn btn-primary m-t" ng-click="showDetail(hospital)">
+					<span ng-show="!load">Search</span>
+					<span ng-show="load">Searching <i class="fa-spinner fa-spin"></i></span>
+				</button>
 
 				<div class="details animated fadeIn" ng-show="detail">
 					<i class="fa fa-close pull-right clickable" ng-click="close()"></i>
