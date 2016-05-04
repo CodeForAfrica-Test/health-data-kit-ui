@@ -89,7 +89,7 @@ angular.module('app.controllers', [])
 			    $http({
 			        method: 'GET',
 			        url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
-			                         address + '&key=AIzaSyCq_hPKdxEybYoangnVh1Fs_ARyjnmdSqs',
+			                         address + '&key=AIzaSyCq_hPKdxEybYoangnVh1Fs_ARyjnmdSqs' + '&sensor=false&components=country:NG',
 
 			        transformRequest: function(data, headersGetter) {
 			            var headers = headersGetter();
