@@ -1,0 +1,31 @@
+{
+  "name": "sahara-health-ui",
+  "version": "1.0.0",
+   "engines": {
+    "node": "0.12.7"
+  },
+  "description": "front end implementation for sahara health",
+  "main": "server.js",
+  "scripts": {
+    "test": "\"echo hello world\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codefornigeria/healthtoolsv2.git"
+  },
+  "keywords": [
+    "health",
+    "dodgy",
+    "doctors",
+    "nigeria"
+  ],
+  "author": "tobi oladele , inioluwa adebanjo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codefornigeria/healthtoolsv2/issues"
+  },
+  "homepage": "https://github.com/codefornigeria/healthtoolsv2#readme",
+  "dependencies": {
+    "node-static": "^0.7.7"
+  }
+}
