@@ -75,10 +75,6 @@ angular.module('app.controllers', [])
 })
 
 .controller('hospitalFinderCtrl', function($scope, Restangular, $http) {
-	Restangular.all('hospital').getList().then(function(response) {
-		$scope.hospitals = response;
-		// console.log(response)
-	})
 
 	$scope.search = function() {
 	    	var address = $scope.hospital.name
@@ -101,7 +97,6 @@ angular.module('app.controllers', [])
 			    }).then(function(results){
 			    	$scope.searching = true;
 			    	$scope.results = results.data.results;
-		        	console.log(results)
 				})
 	        } else {
                $scope.searching = false;
@@ -119,7 +114,20 @@ angular.module('app.controllers', [])
 	$scope.showDetail = function() {
 		$scope.load = true;
 		Restangular.all('hospital/search').post($scope.hospital).then(function(response) {
-			console.log(response);
-		})
+			$scope.hospitals = response;
+			console.log(response.plain())
+		}), function(error){
+            $scope.error = error;
+            console.log(error)
+        };
+	}
+
+	$scope.showHospital = function(hospital) {
+		$scope.hospitalDetails = true;
+		$scope.hospital = hospital.obj;
+	}
+
+	$scope.close = function() {
+		$scope.hospitalDetails = false;
 	}
 })
