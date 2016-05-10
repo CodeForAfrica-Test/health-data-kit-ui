@@ -71,6 +71,41 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media only screen and (max-width: 360px) {
+  .wrapper-xxl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper-xxl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .wrapper-xxl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-xxl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper-xxl {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 hr {
   margin: 0 !important;
   margin-bottom: 15px !important;
