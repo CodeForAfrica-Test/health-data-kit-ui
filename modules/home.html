@@ -1,115 +1,70 @@
-
-<div class="m-t-lg wrapper-xxl m-b-lg">
-	<div class="row">
-		<div class="col-md-12 card no-padder">
-			<div class="div col-xs-12 col-sm-4 col-md-4 b-r m-n" ng-controller="dodgyDoctorsCtrl">
-				<h4>Dodgy Doctors</h4>
-				<hr/>
-				<p class="m-t-n-md">Check to see if your doctor is registered.</p>
-				<p class="m-t-n-sm"><i>Licensed and can't your name ?</i></p>
-				<input type="text" placeholder="Doctor's name" ng-model="doctorName" class="input m-t-lg" ng-change="search()"></input>
-
-				<div class="col-md-10 result m-t no-padder" ng-show="searching">
-					<li ng-repeat="result in results" ng-click="$parent.showDetail(result)">
-						{{result.name}}
-					</li>
-				</div>
-
-				<button class="btn btn-primary m-t" ng-click="$parent.showDetail(doctor)" ng-disabled="!doctorName">Search</button>
-
-				<div class="details animated fadeInUp" ng-show="detail">
-					<i class="fa fa-close pull-right clickable" ng-click="close()"></i>
-					<h5>Name</h5>
-					<p>{{information.name}}</p>
-
-					<h5>Specialization</h5>
-					<p>{{information.specialization}}</p>
-
-					<h5>Address</h5>
-					<p>{{information.address}}</p>
-
-					<span class="badge">Registered Doctor</span>
-					<h6>See photo</h6>
-				</div>
-			</div>
-			<div class="div col-xs-12 col-sm-4 col-md-4 b-r m-n" ng-controller="medicineFinderCtrl">
-				<h4>Medicine Prices</h4>
-				<hr/>
-				<p class="m-t-n-md">Find out much you should pay for your medicine.</p>
-				<p class="m-t-n-sm">Lorem ipsum</p>
-				<input type="text" placeholder="E.g paracetamol" ng-model="medicineName" class="input m-t-lg" ng-change="search()"></input>
-
-				<div class="col-md-10 result m-t no-padder" ng-show="searching">
-					<li ng-repeat="result in results" ng-click="$parent.showDetail(result)">
-						{{result.name}}
-					</li>
-				</div>
-				<button class="btn btn-primary m-t" ng-click="showDetail()" ng-disabled="!medicineName">Search</button>
-
-				<div class="details animated fadeIn" ng-show="detail">
-					<i class="fa fa-close pull-right clickable" ng-click="close()"></i>
-					<h5>Drug Name</h5>
-					<p>{{information.name}}</p>
-
-					<h5>Price</h5>
-					<p>{{information.price}}</p>
-
-					<h5>Form</h5>
-					<p>{{information.form}}</p>
-				</div>
-			</div>	
-			<div class="div col-xs-12 col-sm-4 col-md-4 m-n" ng-controller="hospitalFinderCtrl">
-				<h4>Hospital Finder</h4>
-				<hr/>
-				<form name="hospitalFinder">
-					<select class="input" ng-model="hospital.service" required ng-disabled="load">
-						<option value="">Choose a service</option>
-						<option value="Maternal health delivery">Maternal health delivery</option>
-						<option value="Ambulance">Ambulance</option>
-						<option value="Birth attendants">Birth attendants</option>
-						<option value="C section">C section</option>
-						<option value="Measles immunization">Measles immunization</option>
-						<option value="Ante-natal care">Ante-natal care</option>
-						<option value="Family planning">Family planning</option>
-						<option value="Malaria treatment">Malaria treatment</option>
-					</select>
-					<input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()" required ng-disabled="load"></input>
-					<div class="col-md-10 result m-t no-padder" ng-show="searching">
-						<li ng-repeat="result in results" ng-click="addLocation(result)">
-							{{result.formatted_address}}
-						</li>
-					</div>
-					<button class="btn btn-primary m-t" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
-						<span ng-show="!load">Search</span>
-						<span ng-show="load"><i class="fa fa-spinner fa-spin"></i></span>
-					</button>
-				</form>
-
-				<div class="details animated fadeIn no-padder" ng-show="hospitals.length">
-					<!-- <i class="fa fa-close pull-right clickable" ng-click="close()"></i> -->
-					<p ng-repeat="hospital in hospitals" class="clickable p" ng-click="showHospital(hospital)">{{hospital.obj.facilityName}}</p>
-				</div>
-				<div class="hospitalDetails animated bounceInRight" ng-show="hospitalDetails">
-					<i class="fa fa-close pull-right clickable" ng-click="close()"></i>
-					<h5>Hospital Name</h5>
-					<p>{{hospital.facilityName}}</p>
-
-					<h5>Address</h5>
-					<p>{{hospital.address}}</p>
-
-					<h5>Community</h5>
-					<p>{{hospital.community}}</p>
-
-					<h5>Management</h5>
-					<p>{{hospital.management}}</p>
-				</div>
+<section class="search-mother">
+	<div class="morphsearch" id="morphsearch">
+		<form class="morphsearch-form">
+			<input class="morphsearch-input" type="search" placeholder="Search..."/ ng-change="anime()">
+			<button class="morphsearch-submit" type="submit">Search</button>
+		</form>
+		<div class="morphsearch-content">
+			<div class="dummy-column">
+				<h2>People</h2>
+				<a class="dummy-media-object" href="http://twitter.com/SaraSoueidan">
+					<img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
+					<h3>Sara Soueidan</h3>
+				</a>
+				<a class="dummy-media-object" href="http://twitter.com/rachsmithtweets">
+					<img class="round" src="http://0.gravatar.com/avatar/48959f453dffdb6236f4b33eb8e9f4b7?s=50&d=identicon&r=G" alt="Rachel Smith"/>
+					<h3>Rachel Smith</h3>
+				</a>
+				<a class="dummy-media-object" href="http://www.twitter.com/peterfinlan">
+					<img class="round" src="http://0.gravatar.com/avatar/06458359cb9e370d7c15bf6329e5facb?s=50&d=identicon&r=G" alt="Peter Finlan"/>
+					<h3>Peter Finlan</h3>
+				</a>
+				<a class="dummy-media-object" href="http://www.twitter.com/pcridesagain">
+					<img class="round" src="http://1.gravatar.com/avatar/db7700c89ae12f7d98827642b30c879f?s=50&d=identicon&r=G" alt="Patrick Cox"/>
+					<h3>Patrick Cox</h3>
+				</a>
+				<a class="dummy-media-object" href="https://twitter.com/twholman">
+					<img class="round" src="http://0.gravatar.com/avatar/cb947f0ebdde8d0f973741b366a51ed6?s=50&d=identicon&r=G" alt="Tim Holman"/>
+					<h3>Tim Holman</h3>
+				</a>
+				<a class="dummy-media-object" href="https://twitter.com/shaund0na">
+					<img class="round" src="http://1.gravatar.com/avatar/9bc7250110c667cd35c0826059b81b75?s=50&d=identicon&r=G" alt="Shaun Dona"/>
+					<h3>Shaun Dona</h3>
+				</a>
 			</div>
 		</div>
+		<span class="morphsearch-close"></span>
 	</div>
-</div>
-<script type="text/ng-template" id="dodgyDoctors">
-    <div class="modal-header">Add new client</div>
-    <div class="modal-body">
-        
-    </div>
-</script>
+	<!-- <div class="baby-card"></div>
+	<div class="baby-card"></div> -->
+</section>
+
+<section class="mother animated fadeInUp">
+	<div class="news-card">
+		<a href="" class="photo"></a>
+		<div class="card-details">
+			<h3>Title</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie libero libero, porta lacinia diam fermentum a. Morbi eu magna lectus.
+			</p>
+		</div>
+	</div>
+	<div class="news-card">
+		<a href="" class="photo"></a>
+		<div class="card-details">
+			<h3>Title</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie libero libero, porta lacinia diam fermentum a. Morbi eu magna lectus.
+			</p>
+		</div>
+	</div>
+	<div class="news-card">
+		<a href="" class="photo"></a>
+		<div class="card-details">
+			<h3>Title</h3>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie libero libero, porta lacinia diam fermentum a. Morbi eu magna lectus.
+			</p>
+		</div>
+	</div>
+</section>
