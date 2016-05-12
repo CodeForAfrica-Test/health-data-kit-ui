@@ -2,21 +2,13 @@ angular.module('app.controllers', [])
   
 .controller('appCtrl', function($scope, Restangular, utilsFactory) {
 	$scope.anime = utilsFactory.fun1();
-
-})
-
-.controller('dodgyDoctorsCtrl', function($scope, Restangular) {
-	Restangular.all('doctor').getList().then(function(response) {
-		
-		$scope.doctors = response;
-		// console.log($scope.doctors.plain())
-	})
-
 	var inputMin = 3;
     $scope.search = function() {
-    	if ($scope.doctorName && $scope.doctorName.length >= inputMin) {
-            $scope.searching = true;
-            Restangular.one('doctor/search').get({name: $scope.doctorName}).then(function(response){
+    		$scope.anime = true;
+    	if ($scope.name && $scope.name.length >= inputMin) {
+
+            // $scope.searching = true;
+            Restangular.one('doctor/search').get({name: $scope.name}).then(function(response){
                 $scope.results = response;
                 console.log(response)
              }, function(error){
@@ -37,7 +29,43 @@ angular.module('app.controllers', [])
 	$scope.close = function() {
 		$scope.detail = false;
 	}
+
 })
+
+// .controller('dodgyDoctorsCtrl', function($scope, Restangular) {
+// 	// Restangular.all('doctor').getList().then(function(response) {
+		
+// 	// 	$scope.doctors = response;
+// 	// 	// console.log($scope.doctors.plain())
+// 	// })
+
+// 	var inputMin = 3;
+//     $scope.search = function() {
+//     	utilsFactory.fun1();
+//     	if ($scope.name && $scope.name.length >= inputMin) {
+//             $scope.searching = true;
+//             Restangular.one('doctor/search').get({name: $scope.name}).then(function(response){
+//                 $scope.results = response;
+//                 console.log(response)
+//              }, function(error){
+//                 $scope.error = error;
+//             });
+//         } else {
+//                $scope.searching = false;
+//           }     
+//     }
+
+// 	$scope.showDetail = function(result) {
+// 		$scope.information = result;
+// 		// console.log($scope.detail)
+// 		$scope.searching = false;
+// 		$scope.detail = true;
+// 	}
+
+// 	$scope.close = function() {
+// 		$scope.detail = false;
+// 	}
+// })
 
 .controller('medicineFinderCtrl', function($scope, Restangular) {
 	Restangular.all('medicine').getList().then(function(response) {
