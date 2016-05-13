@@ -1,21 +1,15 @@
-<section class="search-mother">
-	<div class="morphsearch" id="morphsearch">
-		<form class="morphsearch-form">
+<section class="hk-search-mother">
+	<div class="hk-search">
+		<form>
 			<input class="morphsearch-input" type="search" placeholder="Find your doctor" ng-model="name" ng-change="search()" />
-			<button class="morphsearch-submit" type="submit">Search</button>
 		</form>
-		<div class="morphsearch-content">
-			<div class="dummy-column" ng-show="expression">
-				<a class="dummy-media-object" ng-repeat="result in results">
-					<img class="round" src="http://0.gravatar.com/avatar/81b58502541f9445253f30497e53c280?s=50&d=identicon&r=G" alt="Sara Soueidan"/>
-					<h3>{{result.name}}</h3>
-				</a>
-			</div>
+		<div class="hk-search-results animated fadeInUp" ng-show="searching">
+			<i class="fa fa-spinner fa-spin" ng-hide="results.length"></i>
+			<li ng-repeat="result in results">
+				{{result.name}}
+			</li>
 		</div>
-		<span class="morphsearch-close"></span>
 	</div>
-	<!-- <div class="baby-card"></div>
-	<div class="baby-card"></div> -->
 </section>
 
 <section class="mother animated fadeInUp">

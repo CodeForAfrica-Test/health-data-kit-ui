@@ -1,16 +1,14 @@
 angular.module('app.controllers', [])
   
-.controller('appCtrl', function($scope, Restangular, utilsFactory) {
-	$scope.anime = utilsFactory.fun1();
-	var inputMin = 3;
+.controller('appCtrl', function($scope, Restangular) {
+	var inputMin = 1;
     $scope.search = function() {
-    		$scope.anime = true;
     	if ($scope.name && $scope.name.length >= inputMin) {
-
-            // $scope.searching = true;
+            $scope.searching = true;
             Restangular.one('doctor/search').get({name: $scope.name}).then(function(response){
+            	$scope.searching = true;
                 $scope.results = response;
-                console.log(response)
+                // console.log(response)
              }, function(error){
                 $scope.error = error;
             });
@@ -21,7 +19,7 @@ angular.module('app.controllers', [])
 
 	$scope.showDetail = function(result) {
 		$scope.information = result;
-		// console.log($scope.detail)
+		console.log($scope.detail)
 		$scope.searching = false;
 		$scope.detail = true;
 	}
@@ -160,61 +158,61 @@ angular.module('app.controllers', [])
 	}
 })
 
-.factory('utilsFactory', function() {
-	//function definition
-	var fun1 = function() {
-                var morphSearch = document.getElementById( 'morphsearch' ),
-                    input = morphSearch.querySelector( 'input.morphsearch-input' ),
-                    ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
-                    isOpen = isAnimating = false,
-                    // show/hide search area
-                    toggleSearch = function(evt) {
-                        // return if open and the input gets focused
-                        if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
+// .factory('utilsFactory', function() {
+// 	//function definition
+// 	var fun1 = function() {
+//                 var morphSearch = document.getElementById( 'morphsearch' ),
+//                     input = morphSearch.querySelector( 'input.morphsearch-input' ),
+//                     ctrlClose = morphSearch.querySelector( 'span.morphsearch-close' ),
+//                     isOpen = isAnimating = false,
+//                     // show/hide search area
+//                     toggleSearch = function(evt) {
+//                         // return if open and the input gets focused
+//                         if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
 
-                        var offsets = morphsearch.getBoundingClientRect();
-                        if( isOpen ) {
-                            classie.remove( morphSearch, 'open' );
+//                         var offsets = morphsearch.getBoundingClientRect();
+//                         if( isOpen ) {
+//                             classie.remove( morphSearch, 'open' );
 
-                            // trick to hide input text once the search overlay closes 
-                            // todo: hardcoded times, should be done after transition ends
-                            if( input.value !== '' ) {
-                                setTimeout(function() {
-                                    classie.add( morphSearch, 'hideInput' );
-                                    setTimeout(function() {
-                                        classie.remove( morphSearch, 'hideInput' );
-                                        input.value = '';
-                                    }, 300 );
-                                }, 500);
-                            }
+//                             // trick to hide input text once the search overlay closes 
+//                             // todo: hardcoded times, should be done after transition ends
+//                             if( input.value !== '' ) {
+//                                 setTimeout(function() {
+//                                     classie.add( morphSearch, 'hideInput' );
+//                                     setTimeout(function() {
+//                                         classie.remove( morphSearch, 'hideInput' );
+//                                         input.value = '';
+//                                     }, 300 );
+//                                 }, 500);
+//                             }
                             
-                            input.blur();
-                        }
-                        else {
-                            classie.add( morphSearch, 'open' );
-                        }
-                        isOpen = !isOpen;
-                    };
+//                             input.blur();
+//                         }
+//                         else {
+//                             classie.add( morphSearch, 'open' );
+//                         }
+//                         isOpen = !isOpen;
+//                     };
 
-                // events
-                input.addEventListener( 'focus', toggleSearch );
-                ctrlClose.addEventListener( 'click', toggleSearch );
-                // esc key closes search overlay
-                // keyboard navigation events
-                document.addEventListener( 'keydown', function( ev ) {
-                    var keyCode = ev.keyCode || ev.which;
-                    if( keyCode === 27 && isOpen ) {
-                        toggleSearch(ev);
-                    }
-                } );
+//                 // events
+//                 input.addEventListener( 'focus', toggleSearch );
+//                 ctrlClose.addEventListener( 'click', toggleSearch );
+//                 // esc key closes search overlay
+//                 // keyboard navigation events
+//                 document.addEventListener( 'keydown', function( ev ) {
+//                     var keyCode = ev.keyCode || ev.which;
+//                     if( keyCode === 27 && isOpen ) {
+//                         toggleSearch(ev);
+//                     }
+//                 } );
 
 
-                /***** for demo purposes only: don't allow to submit the form *****/
-                morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
-            }
+//                 /***** for demo purposes only: don't allow to submit the form *****/
+//                 morphSearch.querySelector( 'button[type="submit"]' ).addEventListener( 'click', function(ev) { ev.preventDefault(); } );
+//             }
 	
-	//return functions after the injection
-	return {
-	    fun1: fun1
-	};
-})
+// 	//return functions after the injection
+// 	return {
+// 	    fun1: fun1
+// 	};
+// })

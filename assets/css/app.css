@@ -4,356 +4,60 @@
   padding: 0;
   font-family: 'Raleway', Helvetica;
 }
-
-.search-mother {
+.hk-search-mother {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/map.png);
-  display: flex;
-  padding: 10%;
-  justify-content: center;
-  position: relative;
-  /* placeholder */
-  /* hide placeholder when active in Chrome */
+  min-height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/map.png);
+  padding-top: 50px;
 }
-
-.search-mother .morphsearch {
-  width: 40%;
+.hk-search-mother .hk-search {
+  width: 50%;
   height: 80px;
-  background: #fff;
-  margin: 0;
+  background: transparent;
+  margin: 0 auto;
   border-radius: 3px;
-  padding-top: 20px;
-  padding-right: 50px;
-  padding-bottom: 30px;
-  padding-left: 50px;
+  padding-top: 0;
   font-size: 25px;
-  font-weight: lighter !important;
+  font-weight: normal;
   transition: all 0.5s ease-in-out;
-  z-index: 9999;
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  -webkit-transition-property: min-height, width, top, right, left;
-  transition-property: min-height, width, top, right, left;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
-
-.search-mother .morphsearch ::-webkit-input-placeholder {
+.hk-search-mother .hk-search input {
+  width: 100%;
+  height: 80px;
+  font-size: 22px;
+  border: none;
+  border-radius: 3px;
+  padding: 0 20px 0 20px;
+}
+.hk-search-mother .hk-search .hk-search-results {
+  width: 106%;
+  height: auto;
+  background: white;
+  margin: 2px 0 0 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.13), 0 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.hk-search-mother .hk-search .hk-search-results li {
+  width: 100%;
+  list-style: none;
+  padding: 10px 14px 12px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #4d4d4d;
+  font-weight: 500;
+  border-top: 1px solid #f2f2f2;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+.hk-search-mother .hk-search .hk-search-results li:first-of-type {
+  border-top: none;
+}
+.hk-search-mother .hk-search ::-webkit-input-placeholder {
   color: #554061 !important;
   text-align: center;
+  font-size: 20px;
 }
-
-.search-mother .morphsearch.open {
-  width: 100%;
-  height: auto;
-  background: transparent;
-  top: 0px;
-  right: 0px;
-  padding: 0;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-}
-
-.search-mother .morphsearch.open ::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.search-mother .morphsearch.open .morphsearch-form {
-  width: 100%;
-  height: 80px;
-  background: #fff;
-  margin-top: 0 !important;
-  -webkit-transform: translate3d(0, 3em, 0);
-  transform: translate3d(0, 3em, 0);
-}
-
-.search-mother .morphsearch-form {
-  width: 100%;
-  height: 40px;
-  margin: 0 auto;
-  position: relative;
-  -webkit-transition-property: width, height, -webkit-transform;
-  transition-property: width, height, transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
-
-.search-mother .morphsearch-input {
-  width: 100%;
-  height: 100%;
-  padding: 0 10% 0 10px;
-  font-weight: 400;
-  border: none;
-  background: transparent;
-  font-size: 0.8em;
-  color: #ec5a62;
-  -webkit-transition: font-size 0.5s cubic-bezier(0.7, 0, 0.3, 1);
-  transition: font-size 0.5s cubic-bezier(0.7, 0, 0.3, 1);
-}
-
-.search-mother .morphsearch-input::-ms-clear {
-  /* remove cross in IE */
-  display: none;
-}
-
-.search-mother .morphsearch.hideInput .morphsearch-input {
-  color: transparent;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
-
-.search-mother .morphsearch.open .morphsearch-input {
-  font-size: 2em;
-}
-
-.search-mother .morphsearch-input::-webkit-input-placeholder {
-  color: #c2c2c2;
-}
-
-.search-mother .morphsearch-input:-moz-placeholder {
-  color: #c2c2c2;
-}
-
-.search-mother .morphsearch-input::-moz-placeholder {
-  color: #c2c2c2;
-}
-
-.search-mother .morphsearch-input:-ms-input-placeholder {
-  color: #c2c2c2;
-}
-
-.search-mother .gn-search:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.search-mother input[type="search"] {
-  /* reset normalize */
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.search-mother .morphsearch-input:focus,
-.search-mother .morphsearch-submit:focus {
-  outline: none;
-}
-
-.search-mother .morphsearch-submit {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  text-indent: 100px;
-  overflow: hidden;
-  right: 0;
-  top: 50%;
-  background: transparent url(../img/magnifier.svg) no-repeat center center;
-  background-size: 100%;
-  border: none;
-  pointer-events: none;
-  transform-origin: 50% 50%;
-  opacity: 0;
-  -webkit-transform: translate3d(-30px, -50%, 0) scale3d(0, 0, 1);
-  transform: translate3d(-30px, -50%, 0) scale3d(0, 0, 1);
-}
-
-.search-mother .morphsearch.open .morphsearch-submit {
-  pointer-events: auto;
-  opacity: 1;
-  -webkit-transform: translate3d(-30px, -50%, 0) scale3d(1, 1, 1);
-  transform: translate3d(-30px, -50%, 0) scale3d(1, 1, 1);
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.search-mother .morphsearch-close {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  right: 1em;
-  top: 1em;
-  overflow: hidden;
-  text-indent: 100%;
-  cursor: pointer;
-  pointer-events: none;
-  opacity: 0;
-  -webkit-transform: scale3d(0, 0, 1);
-  transform: scale3d(0, 0, 1);
-}
-
-.search-mother .morphsearch.open .morphsearch-close {
-  opacity: 1;
-  pointer-events: auto;
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.search-mother .morphsearch-close::before,
-.search-mother .morphsearch-close::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  border-radius: 3px;
-  opacity: 0.2;
-  background: #000;
-}
-
-.search-mother .morphsearch-close:hover.morphsearch-close::before,
-.search-mother .morphsearch-close:hover.morphsearch-close::after {
-  opacity: 1;
-}
-
-.search-mother .morphsearch-close::before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.search-mother .morphsearch-close::after {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.morphsearch-content {
-  color: #333;
-  width: 80%;
-  height: 0;
-  overflow: hidden;
-  padding: 0;
-  background: #f1f1f1;
-  position: absolute;
-  top: 280px;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.morphsearch.open .morphsearch-content {
-  opacity: 1;
-  height: auto;
-  overflow: visible;
-  /* this breaks the transition of the children in FF: https://bugzilla.mozilla.org/show_bug.cgi?id=625289 */
-  pointer-events: auto;
-  -webkit-transition: opacity 0.3s 0.5s;
-  transition: opacity 0.3s 0.5s;
-}
-
-.dummy-column {
-  width: 100%;
-  padding: 0 0 6em;
-  float: left;
-  opacity: 0;
-  -webkit-transform: translate3d(0, 100px, 0);
-  transform: translateY(100px);
-  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-  transition: transform 0.5s, opacity 0.5s;
-}
-
-.morphsearch.open .dummy-column:first-child {
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
-
-.morphsearch.open .dummy-column:nth-child(2) {
-  -webkit-transition-delay: 0.45s;
-  transition-delay: 0.45s;
-}
-
-.morphsearch.open .dummy-column:nth-child(3) {
-  -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s;
-}
-
-.morphsearch.open .dummy-column {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.dummy-column:nth-child(2) {
-  margin: 0 5%;
-}
-
-.dummy-column h2 {
-  font-size: 1em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #c2c2c2;
-  padding: 0.5em 0;
-}
-
-.round {
-  border-radius: 50%;
-}
-
-.dummy-media-object {
-  padding: 0.75em;
-  display: block;
-  margin: 0.3em 0;
-  cursor: pointer;
-  border-radius: 5px;
-  background: rgba(118, 117, 128, 0.05);
-}
-
-.dummy-media-object:hover,
-.dummy-media-object:focus {
-  background: rgba(118, 117, 128, 0.1);
-}
-
-.dummy-media-object img {
-  display: inline-block;
-  width: 50px;
-  margin: 0 10px 0 0;
-  vertical-align: middle;
-}
-
-.dummy-media-object h3 {
-  vertical-align: middle;
-  font-size: 0.85em;
-  display: inline-block;
-  font-weight: 700;
-  margin: 0 0 0 0;
-  width: calc(100% - 70px);
-  color: rgba(145, 145, 145, 0.7);
-}
-
-.dummy-media-object:hover h3 {
-  color: #ec5a62;
-}
-
-/* Overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-}
-
-.morphsearch.open ~ .overlay {
-  opacity: 1;
-}
-
 .mother {
   width: 100%;
   height: auto;
@@ -363,7 +67,6 @@
   font-family: 'Raleway', Helvetica;
   transition: ease-in;
 }
-
 .mother .news-card {
   width: 33.33%;
   height: 500px;
@@ -371,35 +74,30 @@
   margin: 10px;
   font-family: 'Raleway', Helvetica;
 }
-
 .mother .news-card:hover {
   transition: .375s;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-
 .mother .news-card .photo {
   width: 100%;
-  height: 200px;
+  height: 200px ;
   background: #2196F3;
   position: relative;
   display: block;
   overflow: hidden;
   cursor: pointer;
 }
-
 .mother .news-card .card-details {
   width: 100%;
   height: 300px;
   padding: 40px;
 }
-
 .mother .news-card .card-details h3 {
   text-transform: uppercase;
   font-family: 'Raleway', Helvetica;
   font-weight: 500 !important;
   color: #000;
 }
-
 .mother .news-card .card-details p {
   color: #333333;
 }
