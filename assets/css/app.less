@@ -27,6 +27,29 @@
 	    font-weight: normal;
 	    position: relative;
 
+	    .error {
+	    	width: 100%;
+	    	font-size: .85rem;
+	    	color: red;
+	    	// text-shadow: 0 2px 10px rgba(0,0,0,.2)!important;
+	    }
+
+	    .hospital-search-button {
+	    	width: 99%;
+	    	padding: 1rem;
+	    	font-size: 1rem;
+	    	border: none;
+	    	border-radius: 6px;
+	    	margin-top: 2px;
+	    	color: #fff;
+	    	box-shadow: 0 2px 10px rgba(0,0,0,.2)!important;
+	    	background: #26CEB8;
+
+	    	&[disabled] {
+	    		opacity: 0.7;
+	    	}
+	    }
+
 	    .search-box {
 	    	width: calc(70% - 2rem);
 	    	height: auto;
@@ -62,23 +85,26 @@
 	    }
 
 	    .hospital-type {
-	    	width: 23%;
+	    	width: 99%;
 	    	height: 50px;
 	    	font-size: .85rem;
 	    	border: 0;
-	    	-webkit-appearance: none;
-  			-webkit-border-radius: 0px;
 	    	border-radius: 6px;
 	    	border-top-left-radius: 0;
 	    	border-bottom-left-radius: 0;
-	    	background: #26CEB8;
+	    	background: #fff;
 	    	text-align: center;
-	    	padding-left: 1rem;
+	    	padding-left: 1rem !important;
 	    	padding-right: 1rem;
-	    	color: #fff;
+	    	margin-top: 5px;
+	    	color: #555459;
 	    	box-shadow: 0 2px 10px rgba(0,0,0,.2)!important;
 	    	float: left;
 	    	overflow: ellipsis;
+
+	    	&[disabled] {
+	    		opacity: 0.7;
+	    	}
 	    }
 
 		.hk-search-results {

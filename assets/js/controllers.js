@@ -1,9 +1,8 @@
 angular.module('app.controllers', [])
   
-.controller('appCtrl', function($scope, Restangular) {
+.controller('appCtrl', function($scope, Restangular, $http) {
 	var inputMin = 1;
     $scope.search = function() {
-    		console.log($scope.service)
     	if ((($scope.name && $scope.name.length)>= inputMin ) && $scope.service == 'doctor') {
             $scope.searching = true;
             Restangular.one('doctor/search').get({name: $scope.name}).then(function(response){
@@ -14,7 +13,7 @@ angular.module('app.controllers', [])
             });
         } else if ((($scope.name && $scope.name.length) >= inputMin) && $scope.service == 'hospital') {
             $scope.searching = true;
-            console.log('medicine')
+            var address = $scope.name;
             $http({
 				method: 'GET',
 			    url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
@@ -49,44 +48,29 @@ angular.module('app.controllers', [])
 		$scope.detail = false;
 	}
 
-})
-
-.controller('hospitalFinderCtrl', function($scope, Restangular, $http) {
-
-	$scope.search = function() {
-	    	var address = $scope.hospital.name
-			var inputMin = 3;
-			
-	    	if ($scope.hospital.name && $scope.hospital.name.length >= inputMin) {
-	            // $scope.searching = true;
-			    $http({
-			        method: 'GET',
-			        url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
-			                         address + '&key=AIzaSyCq_hPKdxEybYoangnVh1Fs_ARyjnmdSqs' + '&sensor=false&components=country:NG',
-
-			        transformRequest: function(data, headersGetter) {
-			            var headers = headersGetter();
-
-			            delete headers['Authorization'];
-
-			            return headers;
-			        }
-			    }).then(function(results){
-			    	$scope.searching = true;
-			    	$scope.results = results.data.results;
-				})
-	        } else {
-               $scope.searching = false;
-          } 	   
-	    }
-
 	$scope.addLocation = function(result) {
-		$scope.hospital.name = result.formatted_address;
-		$scope.hospital.latitude = result.geometry.location.lat;
-		$scope.hospital.longitude = result.geometry.location.lng;
+		$scope.name = $scope.hospital.name;
+		$scope.name = result.formatted_address;
+		$scope.name.latitude = result.geometry.location.lat;
+		$scope.name.longitude = result.geometry.location.lng;
 		// console.log(result.formatted_address);
 		$scope.searching = false;
 	}
+
+	$scope.showDetail = function() {
+		$scope.load = true;
+		Restangular.all('hospital/search').post($scope.hospital).then(function(response) {
+			$scope.hospitals = response;
+			console.log(response.plain())
+		}), function(error){
+            $scope.error = error;
+            console.log(error)
+        };
+	}
+
+})
+
+.controller('hospitalFinderCtrl', function($scope, Restangular, $http) {
 
 	$scope.showDetail = function() {
 		$scope.load = true;

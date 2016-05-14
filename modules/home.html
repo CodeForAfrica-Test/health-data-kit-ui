@@ -1,6 +1,7 @@
 <section class="hk-search-mother">
     <div class="hk-search" ng-hide="detail">
-        <form>
+        <form name="searchForm">
+        	<span class="error" ng-show="service == 'hospital'">Enter location e.g Yaba</span>
             <input class="search-box" type="search" placeholder="Find your doctor, a hospital or medicine prices" ng-model="name" ng-change="search()" required ng-disabled="!service" />
 
             <select class="service" ng-model="service">
@@ -10,19 +11,29 @@
                 <option value="hospital">Hospital</option>
             </select>
 
-            <select class="hospital-type" ng-model="service">
-            	<option value="">Choose..</option>
-                <option value="doctor">Maternity</option>
-                <option value="medicine">Medicine</option>
-                <option value="hospital">Hospital</option>
-                <option value="hospital">Hospital</option>
-                <option value="hospital">Hospital</option>
-                <option value="hospital">Hospital</option>
+            <select class="hospital-type" ng-model="hospital.service" ng-show="service == 'hospital'" ng-disabled="!name" required>
+            	<option value="">Choose a service</option>
+                <option value="Maternal health delivery">Maternal health delivery</option>
+				<option value="Ambulance">Ambulance</option>
+				<option value="Birth attendants">Birth attendants</option>
+				<option value="C section">C section</option>
+				<option value="Measles immunization">Measles immunization</option>
+				<option value="Ante-natal care">Ante-natal care</option>
+				<option value="Family planning">Family planning</option>
+				<option value="Malaria treatment">Malaria treatment</option>
             </select>
+
+            <button class="hospital-search-button" ng-show="service == 'hospital'" ng-disabled="searchForm.$invalid" ng-click="showDetail()">
+            	Search
+            </button>
         </form>
         <div class="hk-search-results" ng-show="searching">
-            <li ng-repeat="result in results" ng-click="showDetail(result)">
-                <p class="title">{{result.name}}</p>
+            <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address">
+                <p class="title">{{result.name}} jsjhouhou</p>
+                <p class="sub">{{result.specialization}}</p>
+            </li>
+            <li ng-repeat="result in results" ng-click="addLocation(result)" ng-show="result.formatted_address">
+                <p class="title">{{result.formatted_address}}</p>
                 <p class="sub">{{result.specialization}}</p>
             </li>
             <p class="text-center"><i class="fa fa-spinner fa-spin" ng-hide="results.length"></i></p>
