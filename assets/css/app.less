@@ -1,20 +1,23 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,300,500);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,500);
 
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Raleway', Helvetica;
+}
+
+.text-center {
+	text-align: center !important;
 }
 
 .hk-search-mother {
 	width: 100%;
 	min-height: 500px;
-	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/map.png);
+	background: url(../img/map.png);
 	padding-top: 50px;
 
 
 	.hk-search {
-		width: 50%;
+		width: 30%;
 		height: 80px;
 		background: transparent;
 		margin: 0 auto;
@@ -22,49 +25,187 @@
 	    padding-top: 0;
 	    font-size: 25px;
 	    font-weight: normal;
+	    position: relative;
 
-
-	    input {
-	    	width: 100%;
-	    	height: 80px;
-		    font-size: 22px;
+	    .search-box {
+	    	width: calc(70% - 2rem);
+	    	height: auto;
+		    font-size: 1rem;
 	    	border: none;
-	    	border-radius: 3px;
-	    	padding: 0 20px 0 20px; 
+	    	border-radius: 6px;
+	    	border-top-right-radius: 0;
+	    	border-bottom-right-radius: 0;
+	    	padding: 1rem;
+	    	color: #555459;
+	    	box-shadow: 0 2px 10px rgba(0,0,0,.2)!important;
+	    	float: left;
+	    }
+
+	    .service {
+	    	width: 23%;
+	    	height: 50px;
+	    	font-size: .85rem;
+	    	border: 0;
+	    	-webkit-appearance: none;
+  			-webkit-border-radius: 0px;
+	    	border-radius: 6px;
+	    	border-top-left-radius: 0;
+	    	border-bottom-left-radius: 0;
+	    	background: #26CEB8;
+	    	text-align: center;
+	    	padding-left: 1rem;
+	    	padding-right: 1rem;
+	    	color: #fff;
+	    	box-shadow: 0 2px 10px rgba(0,0,0,.2)!important;
+	    	float: left;
+	    	overflow: ellipsis;
+	    }
+
+	    .hospital-type {
+	    	width: 23%;
+	    	height: 50px;
+	    	font-size: .85rem;
+	    	border: 0;
+	    	-webkit-appearance: none;
+  			-webkit-border-radius: 0px;
+	    	border-radius: 6px;
+	    	border-top-left-radius: 0;
+	    	border-bottom-left-radius: 0;
+	    	background: #26CEB8;
+	    	text-align: center;
+	    	padding-left: 1rem;
+	    	padding-right: 1rem;
+	    	color: #fff;
+	    	box-shadow: 0 2px 10px rgba(0,0,0,.2)!important;
+	    	float: left;
+	    	overflow: ellipsis;
 	    }
 
 		.hk-search-results {
-			width: 106%;
+			width: calc(100%);
 			height: auto;
 			background: white;
 			margin: 2px 0 0 0;
-		    box-shadow: 0 0 0 1px rgba(0,0,0,0.13),0 5px 10px rgba(0,0,0,0.05);
-		    border-radius: 3px;
+		    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+		    border-radius: 6px;
 		    overflow: hidden;
+		    z-index: 99999px !important;
+		    font-family: "Lato", 'Helvetica' !important;
 
 			li {
 				width: 100%;
 				list-style: none;
-				padding: 10px 14px 12px;
-			    font-size: 15px;
-			    line-height: 20px;
-			    color: #4d4d4d;
-			    font-weight: 500;
+				padding: 1rem;
+			    font-size: .8rem;
+			    color: #555459 !important;
+			    font-weight: 400;
 			    border-top: 1px solid #f2f2f2;
-			    text-transform: lowercase;
+			    text-transform: capitalize;
 			    cursor: pointer;
+			    font-family: "Lato", 'Helvetica' !important;
+
+			    p {
+			    	margin-bottom: 0;
+			    	color: #555459 !important;
+			    	font-size: .95rem;
+
+			    }
+
+			    .title {
+			    	display: block;
+			    	font-weight: 700;
+			    	line-height: 1.2rem;
+			    }
+
+			    .sub {
+			    	font-size: .8rem;
+			    	display: block;
+			    	line-height: 1.2rem;
+			    	color: #555459;
+			    }
+
+			    &:hover {
+			    	background: #edf7fd;
+			    }
 
 			    &:first-of-type {
 			    	border-top: none;
 			    }
 			}
 		}
+
 	    ::-webkit-input-placeholder {
-			color: #554061 !important;
-			text-align: center;
-			font-size: 20px;
+			color: grey !important;
+			font-size: 1rem;
 		}
-		transition: all .5s ease-in-out;
+		// transition: all .5s ease-in-out;
+	}
+
+	.detailCard {
+		width: 40%;
+		min-height: 200px;
+		margin: 0 auto;
+		padding: .5rem;
+		background: #fff;
+		box-shadow: 0 4px 8px rgba(0,0,0,.2);
+		border-radius: 3px;
+		border-top: 3px solid indianred;
+		line-height: 1.2rem !important;
+
+		a {
+		    font-size: .8rem !important;
+		    color: #555459;
+		    cursor: pointer;
+		}
+
+		.badge {
+			padding: .4rem;
+			background: #353535;
+			font-weight: 400;
+			font-size: .7125rem;
+			float: right;
+			letter-spacing: .1rem;
+			font-family: "Lato", 'Helvetica' !important;
+			cursor: pointer;
+		}
+
+		.single {
+			width: 100%;
+			color: #555459;
+			line-height: .567rem !important;
+
+			i {
+				font-size: 1.2rem;
+				top: 0;
+				vertical-align: middle;
+				height: 40px;
+				color: #13BB97;
+			}
+
+			span {
+				display: inline-block;
+				padding: .5rem;
+				margin-bottom: 2%;
+
+				h5 {
+					font-weight: 900;
+					font-size: .9375rem;
+					display: block;
+					margin: 0;
+					font-family: "Lato", 'Helvetica' !important;
+
+				}
+
+				p {
+					font-size: .8125rem;
+					margin-bottom: 0;
+					line-height: .7rem !important;
+					font-family: "Lato", 'Helvetica' !important;
+				}
+			}
+		}
+
+		
 	}
 }
 
