@@ -1,8 +1,12 @@
 <section class="hk-search-mother">
+	<div class="copy">
+		<h3>Find hospitals and doctors.</h3>
+		<p>We make it easy to find registered doctors and hospitals and health care facilities anywhere in Nigeria. </p>
+	</div>
     <div class="hk-search" ng-hide="detail">
-        <form name="searchForm">
+        <form name="searchForm" ng-hide="showHospitalList">
         	<span class="error" ng-show="service == 'hospital'">Enter location e.g Yaba</span>
-            <input class="search-box" type="search" placeholder="Find your doctor, a hospital or medicine prices" ng-model="name" ng-change="search()" required ng-disabled="!service" />
+            <input class="search-box" type="search" placeholder="Find your doctor, a hospital or medicine prices" ng-model="hospital.name" ng-change="search()" required ng-disabled="!service" />
 
             <select class="service" ng-model="service">
             	<option value="">Choose..</option>
@@ -11,7 +15,7 @@
                 <option value="hospital">Hospital</option>
             </select>
 
-            <select class="hospital-type" ng-model="hospital.service" ng-show="service == 'hospital'" ng-disabled="!name" required>
+            <select class="hospital-type" ng-model="hospital.service" ng-show="service == 'hospital'" ng-disabled="!hospital.name" required>
             	<option value="">Choose a service</option>
                 <option value="Maternal health delivery">Maternal health delivery</option>
 				<option value="Ambulance">Ambulance</option>
@@ -23,12 +27,16 @@
 				<option value="Malaria treatment">Malaria treatment</option>
             </select>
 
-            <button class="hospital-search-button" ng-show="service == 'hospital'" ng-disabled="searchForm.$invalid" ng-click="showDetail()">
-            	Search
+            <button class="hospital-search-button" ng-show="service == 'hospital'" ng-disabled="searchForm.$invalid" ng-click="showHospital()">
+            	<span ng-show="!loading">Search</span>
+            	<span ng-show="loading"><i class="fa fa-spinner fa-spin"></i></span>
             </button>
         </form>
         <div class="hk-search-results" ng-show="searching">
-            <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address">
+        	<div class="goback" ng-show="false" ng-click="close()">
+        		<i class="fa fa-long-arrow-left"></i> Go back
+        	</div>
+            <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address || result.dis">
                 <p class="title">{{result.name}} jsjhouhou</p>
                 <p class="sub">{{result.specialization}}</p>
             </li>
@@ -36,13 +44,17 @@
                 <p class="title">{{result.formatted_address}}</p>
                 <p class="sub">{{result.specialization}}</p>
             </li>
+            <li ng-repeat="result in results" ng-click="viewHospital(result)" ng-show="result.dis">
+                <p class="title">{{result.obj.facilityName}}</p>
+                <p class="sub">{{result.obj.community}}</p>
+            </li>
             <p class="text-center"><i class="fa fa-spinner fa-spin" ng-hide="results.length"></i></p>
         </div>
     </div>
-    <div class="detailCard" ng-show="detail">
+    <div class="detailCard" ng-show="detail"> <!--detail-->
         <span class="badge" ng-click="close()"><i class="fa fa-arrow-circle-o-left"></i> Go back</span>
 
-        <div class="single">
+        <div class="single" ng-hide="hospitalInfo.length">
             <i class="fa fa-user-md"></i>
             <span>
 				<h5>Name</h5>
@@ -50,15 +62,16 @@
 			</span>
         </div>
 
-        <div class="single">
+        <div class="single" ng-hide="hospitalInfo.length">
             <i class="fa fa-phone"></i>
             <span>
 				<h5>Telephone Number</h5>
 				<p>{{information.telephone}}</p>
+				<p ng-if="!information.telephone">Not available</p>
 			</span>
         </div>
 
-        <div class="single">
+        <div class="single" ng-hide="hospitalInfo.length">
             <i class="fa fa-hospital-o"></i>
             <span>
 				<h5>Specialization</h5>
@@ -66,7 +79,7 @@
 			</span>
         </div>
 
-        <div class="single">
+        <div class="single" ng-hide="hospitalInfo.length">
             <i class="fa fa-building"></i>
             <span>
 				<h5>Address</h5>
@@ -74,6 +87,60 @@
 			</span>
         </div>
 
+    </div>
+
+    <div class="detailCard" ng-show="detailView"> <!--detail-->
+        <span class="badge" ng-click="closeHospitalView()"><i class="fa fa-arrow-circle-o-left"></i> Go back</span>
+
+        <div class="single">
+            <i class="fa fa-user-md"></i>
+            <span>
+				<h5>Name</h5>
+				<p>{{hospitalInfo.facilityName}}</p>
+			</span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-phone"></i>
+            <span>
+				<h5>Management</h5>
+				<p>{{hospitalInfo.management}}</p>
+			</span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-hospital-o"></i>
+            <span>
+				<h5>Medical personel</h5>
+				<p>{{hospitalInfo.numDoctorsFulltime}} Doctors and {{hospitalInfo.numNursesFulltime}} Nurses</p>
+			</span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-building"></i>
+            <span>
+				<h5>Community</h5>
+				<p>{{hospitalInfo.community}}</p>
+			</span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-building"></i>
+            <span>
+				<h5>Water supply</h5>
+				<p ng-if="improvedWaterSupply">Yes</p>
+				<p ng-if="!improvedWaterSupply ">No</p>
+			</span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-building"></i>
+            <span>
+				<h5>Ambulance</h5>
+				<p ng-if="emergencyTransport">Yes</p>
+				<p ng-if="!emergencyTransport">No</p>
+			</span>
+        </div>
     </div>
 </section>
 

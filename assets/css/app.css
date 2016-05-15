@@ -6,11 +6,47 @@
 .text-center {
   text-align: center !important;
 }
+form {
+  margin-bottom: 0 !important;
+}
 .hk-search-mother {
   width: 100%;
   min-height: 500px;
   background: url(../img/map.png);
-  padding-top: 50px;
+  padding-top: 70px;
+}
+.hk-search-mother .copy {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-bottom: 0;
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .copy {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+.hk-search-mother .copy h3 {
+  font-weight: 900 !important;
+  color: #fff;
+  font-size: 3.5rem;
+  text-transform: none;
+  text-align: center;
+  line-height: 3rem;
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .copy h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+.hk-search-mother .copy p {
+  color: #fff;
+  padding: 5rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
+  font-weight: normal;
 }
 .hk-search-mother .hk-search {
   width: 30%;
@@ -22,6 +58,11 @@
   font-size: 25px;
   font-weight: normal;
   position: relative;
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .hk-search {
+    width: 80%;
+  }
 }
 .hk-search-mother .hk-search .error {
   width: 100%;
@@ -55,6 +96,14 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
   float: left;
 }
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .hk-search .search-box {
+    width: calc(89%);
+    -webkit-border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-top-right-radius: 6px;
+  }
+}
 .hk-search-mother .hk-search .service {
   width: 23%;
   height: 50px;
@@ -73,6 +122,14 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
   float: left;
   overflow: ellipsis;
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .hk-search .service {
+    width: 99%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2) !important;
+  }
 }
 .hk-search-mother .hk-search .hospital-type {
   width: 99%;
@@ -105,6 +162,15 @@
   overflow: hidden;
   z-index: 99999px !important;
   font-family: "Lato", 'Helvetica' !important;
+}
+.hk-search-mother .hk-search .hk-search-results .goback {
+  width: 100%;
+  padding: .875rem;
+  background: #f8f8f8;
+  color: #555459;
+  text-align: center;
+  font-size: .8rem;
+  cursor: pointer;
 }
 .hk-search-mother .hk-search .hk-search-results li {
   width: 100%;
@@ -155,6 +221,11 @@
   border-top: 3px solid indianred;
   line-height: 1.2rem !important;
 }
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .detailCard {
+    width: 80%;
+  }
+}
 .hk-search-mother .detailCard a {
   font-size: .8rem !important;
   color: #555459;
@@ -162,13 +233,14 @@
 }
 .hk-search-mother .detailCard .badge {
   padding: .4rem;
-  background: #353535;
+  background: #fff;
   font-weight: 400;
   font-size: .7125rem;
   float: right;
   letter-spacing: .1rem;
   font-family: "Lato", 'Helvetica' !important;
   cursor: pointer;
+  color: #000;
 }
 .hk-search-mother .detailCard .single {
   width: 100%;
