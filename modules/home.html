@@ -1,5 +1,5 @@
 <section class="hk-search-mother">
-	<div class="copy">
+	<div class="copy" ng-hide="copy">
 		<h3>Find hospitals and doctors.</h3>
 		<p>We make it easy to find registered doctors and hospitals and health care facilities anywhere in Nigeria. </p>
 	</div>
@@ -36,6 +36,7 @@
         	<div class="goback" ng-show="false" ng-click="close()">
         		<i class="fa fa-long-arrow-left"></i> Go back
         	</div>
+        	<p ng-if="!results.length" class="text-center m-t-md">NOT FOUND</p>
             <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address || result.dis">
                 <p class="title">{{result.name}} jsjhouhou</p>
                 <p class="sub">{{result.specialization}}</p>
@@ -48,6 +49,7 @@
                 <p class="title">{{result.obj.facilityName}}</p>
                 <p class="sub">{{result.obj.community}}</p>
             </li>
+
             <p class="text-center"><i class="fa fa-spinner fa-spin" ng-hide="results.length"></i></p>
         </div>
     </div>

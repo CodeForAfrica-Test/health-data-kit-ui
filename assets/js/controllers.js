@@ -4,12 +4,14 @@ angular.module('app.controllers', [])
 	var inputMin = 1;
     $scope.search = function() {
     	if ((($scope.hospital.name && $scope.hospital.name.length)>= inputMin ) && $scope.service == 'doctor') {
+    		$scope.copy = true;
             $scope.searching = true;
             Restangular.one('doctor/search').get({name: $scope.hospital.name}).then(function(response){
             	$scope.searching = true;
                 $scope.results = response;
              }, function(error){
                 $scope.error = error;
+                console.log(error)
             });
         } else if ((($scope.hospital.name && $scope.hospital.name.length) >= inputMin) && $scope.service == 'hospital') {
             $scope.searching = true;
@@ -32,6 +34,9 @@ angular.module('app.controllers', [])
 			})
         } else {
         	$scope.searching = false;
+    		$scope.copy = false;
+        	$scope.searching = false;
+    		
         }
     }
 
