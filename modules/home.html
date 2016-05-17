@@ -1,44 +1,26 @@
 <section class="hk-search-mother">
-	<div class="copy" ng-hide="copy">
-		<h3>Find hospitals and doctors.</h3>
-		<p>We make it easy to find registered doctors and hospitals and health care facilities anywhere in Nigeria. </p>
+	<div class="copy" ng-hide="service">
+		<h3>Find hospitals and doctors</h3>
+		<p>We make it easy to find registered doctors and hospitals and health care facilities anywhere in Nigeria</p>
 	</div>
-    <div class="hk-search" ng-hide="detail">
+    <div class="hk-search" ng-hide="detail || service == 'hospital'">
         <form name="searchForm" ng-hide="showHospitalList">
-        	<span class="error" ng-show="service == 'hospital'">Enter location e.g Yaba</span>
-            <input class="search-box" type="search" placeholder="Find your doctor, a hospital or medicine prices" ng-model="hospital.name" ng-change="search()" required ng-disabled="!service" />
+            <input class="search-box" type="search" placeholder="{{placeholder}}" ng-model="hospital.name" ng-change="search()" required ng-disabled="!service" />
 
             <select class="service" ng-model="service">
             	<option value="">Choose..</option>
                 <option value="doctor">Doctor</option>
-                <!-- <option value="medicine">Medicine</option> -->
                 <option value="hospital">Hospital</option>
             </select>
-
-            <select class="hospital-type" ng-model="hospital.service" ng-show="service == 'hospital'" ng-disabled="!hospital.name" required>
-            	<option value="">Choose a service</option>
-                <option value="Maternal health delivery">Maternal health delivery</option>
-				<option value="Ambulance">Ambulance</option>
-				<option value="Birth attendants">Birth attendants</option>
-				<option value="C section">C section</option>
-				<option value="Measles immunization">Measles immunization</option>
-				<option value="Ante-natal care">Ante-natal care</option>
-				<option value="Family planning">Family planning</option>
-				<option value="Malaria treatment">Malaria treatment</option>
-            </select>
-
-            <button class="hospital-search-button" ng-show="service == 'hospital'" ng-disabled="searchForm.$invalid" ng-click="showHospital()">
-            	<span ng-show="!loading">Search</span>
-            	<span ng-show="loading"><i class="fa fa-spinner fa-spin"></i></span>
-            </button>
         </form>
+
         <div class="hk-search-results" ng-show="searching">
         	<div class="goback" ng-show="false" ng-click="close()">
         		<i class="fa fa-long-arrow-left"></i> Go back
         	</div>
         	<p ng-if="!results.length" class="text-center m-t-md">NOT FOUND</p>
             <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address || result.dis">
-                <p class="title">{{result.name}} jsjhouhou</p>
+                <p class="title">{{result.name}}</p>
                 <p class="sub">{{result.specialization}}</p>
             </li>
             <li ng-repeat="result in results" ng-click="addLocation(result)" ng-show="result.formatted_address">
@@ -53,6 +35,58 @@
             <p class="text-center"><i class="fa fa-spinner fa-spin" ng-hide="results.length"></i></p>
         </div>
     </div>
+    
+    <!-- Hospital search -->
+    <div class="hsp-search" ng-show="service == 'hospital'">
+        <form name="searchForm" ng-hide="showHospitalList">
+            <input class="search-box" type="search" placeholder="Enter location e.g yaba" ng-model="hospital.name" ng-change="search()" required/>
+
+            <select class="hospital-type" ng-model="hospital.service" required>
+                <option value="">Choose a service</option>
+                <option value="Maternal health delivery">Maternal health delivery</option>
+                <option value="Ambulance">Ambulance</option>
+                <option value="Birth attendants">Birth attendants</option>
+                <option value="C section">C section</option>
+                <option value="Measles immunization">Measles immunization</option>
+                <option value="Ante-natal care">Ante-natal care</option>
+                <option value="Family planning">Family planning</option>
+                <option value="Malaria treatment">Malaria treatment</option>
+            </select>
+                
+            <select class="hospital-type" ng-model="service">
+                <option value="hospital">Hospital</option>
+                <option value="doctor">Doctor</option>
+            </select>
+
+            <button class="service" ng-click="showHospital()">
+                <span ng-show="!loading">Search</span>
+                <span ng-show="loading"><i class="fa fa-spinner fa-spin"></i></span>
+            </button>
+        </form>
+
+        <div class="hk-search-results" ng-show="searching">
+            <div class="goback" ng-show="false" ng-click="close()">
+                <i class="fa fa-long-arrow-left"></i> Go back
+            </div>
+            <p ng-if="!results.length" class="text-center m-t-md">NOT FOUND</p>
+            <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address || result.dis">
+                <p class="title">{{result.name}}</p>
+                <p class="sub">{{result.specialization}}</p>
+            </li>
+            <li ng-repeat="result in results" ng-click="addLocation(result)" ng-show="result.formatted_address">
+                <p class="title">{{result.formatted_address}}</p>
+                <p class="sub">{{result.specialization}}</p>
+            </li>
+            <li ng-repeat="result in results" ng-click="viewHospital(result)" ng-show="result.dis">
+                <p class="title">{{result.obj.facilityName}}</p>
+                <p class="sub">{{result.obj.community}}</p>
+            </li>
+
+            <p class="text-center"><i class="fa fa-spinner fa-spin" ng-hide="results.length"></i></p>
+        </div>
+    </div>
+
+
     <div class="detailCard" ng-show="detail"> <!--detail-->
         <span class="badge" ng-click="close()"><i class="fa fa-arrow-circle-o-left"></i> Go back</span>
 

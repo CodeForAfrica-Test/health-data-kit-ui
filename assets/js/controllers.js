@@ -1,6 +1,7 @@
 angular.module('app.controllers', [])
   
 .controller('appCtrl', function($scope, Restangular, $http) {
+	// $scope.placeholder = 'Search';
 	var inputMin = 1;
     $scope.search = function() {
     	if ((($scope.hospital.name && $scope.hospital.name.length)>= inputMin ) && $scope.service == 'doctor') {
@@ -36,7 +37,7 @@ angular.module('app.controllers', [])
         	$scope.searching = false;
     		$scope.copy = false;
         	$scope.searching = false;
-    		
+
         }
     }
 
