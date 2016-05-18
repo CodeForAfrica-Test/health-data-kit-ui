@@ -37,7 +37,7 @@ angular.module('app.controllers', [])
         	$scope.searching = false;
     		$scope.copy = false;
         	$scope.searching = false;
-
+			$scope.hospitalResults = false;
         }
     }
 
@@ -53,6 +53,7 @@ angular.module('app.controllers', [])
 	$scope.viewHospital = function(result) {
 		$scope.hospitalInfo = result.obj;
 		$scope.showHospitalList = true;
+		$scope.hospitalResults = false;
 		$scope.searching = false;
 		$scope.detailView = true;
 		console.log(result)
@@ -64,9 +65,14 @@ angular.module('app.controllers', [])
 		$scope.detailView = false;
 	}
 
+	$scope.closeHospital = function() {
+		$scope.showHospitalList = false;
+	}
+
 	$scope.closeHospitalView = function() {
 		$scope.detailView = false;
 		$scope.searching = true;
+		$scope.showHospitalList = false;
 	}
 
 	$scope.addLocation = function(result) {
@@ -81,8 +87,9 @@ angular.module('app.controllers', [])
 		$scope.loading = true;
 		Restangular.all('hospital/search').post($scope.hospital).then(function(response) {
 			$scope.results = response;
-			$scope.searching = true;
-			$scope.showHospitalList = true;
+			$scope.hospitalResults = true;
+			// $scope.showHospitalList = true;
+			$scope.loading = false;
 			console.log(response.plain())
 		}), function(error){
             $scope.error = error;

@@ -65,9 +65,24 @@
         </form>
 
         <div class="hk-search-results" ng-show="searching">
-            <div class="goback" ng-show="false" ng-click="close()">
-                <i class="fa fa-long-arrow-left"></i> Go back
-            </div>
+            <p ng-if="!results.length" class="text-center m-t-md">NOT FOUND</p>
+            <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address || result.dis">
+                <p class="title">{{result.name}}</p>
+                <p class="sub">{{result.specialization}}</p>
+            </li>
+            <li ng-repeat="result in results" ng-click="addLocation(result)" ng-show="result.formatted_address">
+                <p class="title">{{result.formatted_address}}</p>
+                <p class="sub">{{result.specialization}}</p>
+            </li>
+            <li ng-repeat="result in results" ng-click="viewHospital(result)" ng-show="result.dis">
+                <p class="title">{{result.obj.facilityName}}</p>
+                <p class="sub">{{result.obj.community}}</p>
+            </li>
+
+            <p class="text-center"><i class="fa fa-spinner fa-spin" ng-hide="results.length"></i></p>
+        </div>
+
+        <div class="hk-search-results" ng-show="hospitalResults">
             <p ng-if="!results.length" class="text-center m-t-md">NOT FOUND</p>
             <li ng-repeat="result in results" ng-click="showDetail(result)" ng-hide="result.formatted_address || result.dis">
                 <p class="title">{{result.name}}</p>
@@ -124,23 +139,26 @@
         </div>
 
     </div>
+    
+    <!--The hospital detail card-->
+    <div class="hospital-detail-card" ng-show="detailView"> <!--detailView-->
+        <!-- <span class="badge" ng-click="closeHospitalView()"><i class="fa fa-arrow-circle-o-left"></i> Go back</span> -->
 
-    <div class="detailCard" ng-show="detailView"> <!--detail-->
-        <span class="badge" ng-click="closeHospitalView()"><i class="fa fa-arrow-circle-o-left"></i> Go back</span>
-
-        <div class="single">
+        <div class="single no-border-top">
             <i class="fa fa-user-md"></i>
             <span>
 				<h5>Name</h5>
-				<p>{{hospitalInfo.facilityName}}</p>
+				<p ng-if="facilityName">{{hospitalInfo.facilityName}}</p>
+                <p ng-if="!facilityName ">Not Available</p>
 			</span>
         </div>
 
-        <div class="single">
+        <div class="single no-border-top">
             <i class="fa fa-phone"></i>
             <span>
 				<h5>Management</h5>
-				<p>{{hospitalInfo.management}}</p>
+				<p ng-if="management">{{hospitalInfo.management}}</p>
+                <p ng-if="!management">Not available</p>
 			</span>
         </div>
 
@@ -148,7 +166,8 @@
             <i class="fa fa-hospital-o"></i>
             <span>
 				<h5>Medical personel</h5>
-				<p>{{hospitalInfo.numDoctorsFulltime}} Doctors and {{hospitalInfo.numNursesFulltime}} Nurses</p>
+				<p ng-if="numDoctorsFulltime">{{hospitalInfo.numDoctorsFulltime}} Doctors and {{hospitalInfo.numNursesFulltime}} Nurses</p>
+                <p ng-if="!numDoctorsFulltime">Not available</p>
 			</span>
         </div>
 
@@ -156,12 +175,13 @@
             <i class="fa fa-building"></i>
             <span>
 				<h5>Community</h5>
-				<p>{{hospitalInfo.community}}</p>
+				<p ng-if="community">{{hospitalInfo.community}}</p>
+                <p ng-if="!community">Not available</p>
 			</span>
         </div>
 
         <div class="single">
-            <i class="fa fa-building"></i>
+            <i class="fa fa-coffee"></i>
             <span>
 				<h5>Water supply</h5>
 				<p ng-if="improvedWaterSupply">Yes</p>
@@ -170,7 +190,43 @@
         </div>
 
         <div class="single">
-            <i class="fa fa-building"></i>
+            <i class="fa fa-bolt"></i>
+            <span>
+                <h5>Electricity</h5>
+                <p ng-if="phcnElectricity">Yes</p>
+                <p ng-if="!phcnElectricity ">No</p>
+            </span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-h-square"></i>
+            <span>
+                <h5>Vaccine Fridge</h5>
+                <p ng-if="vaccineFridge">Yes</p>
+                <p ng-if="!vaccineFridge ">No</p>
+            </span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-plus-square"></i>
+            <span>
+                <h5>Malaria Treatment</h5>
+                <p ng-if="malariaTreatmentArtemisinin">Yes</p>
+                <p ng-if="!malariaTreatmentArtemisinin ">No</p>
+            </span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-bed"></i>
+            <span>
+                <h5>Birth Attendants</h5>
+                <p ng-if="skilledBirthAttendant">Yes</p>
+                <p ng-if="!skilledBirthAttendant ">No</p>
+            </span>
+        </div>
+
+        <div class="single">
+            <i class="fa fa-ambulance"></i>
             <span>
 				<h5>Ambulance</h5>
 				<p ng-if="emergencyTransport">Yes</p>

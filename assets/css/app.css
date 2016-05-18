@@ -9,6 +9,9 @@
 .m-t-md {
   margin-top: 2rem;
 }
+.no-border-top {
+  border-top: 0 !important;
+}
 form {
   margin-bottom: 0 !important;
 }
@@ -19,6 +22,7 @@ form {
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 70px;
+  position: relative;
 }
 .hk-search-mother .copy {
   text-align: center;
@@ -257,14 +261,15 @@ form {
 }
 @media all and (min-width: 320px) and (max-width: 640px) {
   .hk-search-mother .hsp-search .search-box {
-    width: calc(89%);
+    width: calc(90%);
     -webkit-border-bottom-left-radius: 0;
     -webkit-border-bottom-right-radius: 0;
     -webkit-border-top-right-radius: 6px;
+    border-right: 1px solid #d9d9d9;
   }
 }
 .hk-search-mother .hsp-search .service {
-  width: 15%;
+  width: 16%;
   height: 50px;
   font-size: .85rem;
   border: 0;
@@ -305,6 +310,13 @@ form {
 }
 .hk-search-mother .hsp-search .hospital-type[disabled] {
   opacity: 0.7;
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .hsp-search .hospital-type {
+    width: 100%;
+    border-top: 0;
+    border-right: 1px solid #d9d9d9;
+  }
 }
 .hk-search-mother .hsp-search .hk-search-results {
   width: calc(100%);
@@ -425,6 +437,78 @@ form {
   font-family: "Lato", 'Helvetica' !important;
 }
 .hk-search-mother .detailCard .single span p {
+  font-size: .8125rem;
+  margin-bottom: 0;
+  line-height: .7rem !important;
+  font-family: "Lato", 'Helvetica' !important;
+}
+.hk-search-mother .hospital-detail-card {
+  width: 40%;
+  min-height: 200px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  border-top: 3px solid indianred;
+  line-height: 1.2rem !important;
+  z-index: 1;
+}
+@media all and (min-width: 320px) and (max-width: 640px) {
+  .hk-search-mother .hospital-detail-card {
+    width: 90%;
+  }
+}
+.hk-search-mother .hospital-detail-card a {
+  font-size: .8rem !important;
+  color: #555459;
+  cursor: pointer;
+}
+.hk-search-mother .hospital-detail-card .badge {
+  padding: .4rem;
+  background: #fff;
+  font-weight: 400;
+  font-size: .7125rem;
+  float: right;
+  letter-spacing: .1rem;
+  font-family: "Lato", 'Helvetica' !important;
+  cursor: pointer;
+  color: #000;
+}
+.hk-search-mother .hospital-detail-card .single {
+  width: 50%;
+  min-height: 70px;
+  color: #555459;
+  line-height: .567rem !important;
+  float: left;
+  border-top: 1px solid #d9d9d9;
+}
+.hk-search-mother .hospital-detail-card .single i {
+  font-size: 1.2rem;
+  top: 0;
+  vertical-align: middle;
+  height: 40px;
+  color: #4D6DC3;
+  margin-right: 0;
+}
+.hk-search-mother .hospital-detail-card .single span {
+  display: inline-block;
+  padding: .5rem;
+  padding-left: 0;
+  margin-bottom: 2%;
+}
+.hk-search-mother .hospital-detail-card .single span h5 {
+  font-weight: 900;
+  font-size: .9375rem;
+  display: block;
+  margin: 0;
+  font-family: "Lato", 'Helvetica' !important;
+}
+.hk-search-mother .hospital-detail-card .single span p {
   font-size: .8125rem;
   margin-bottom: 0;
   line-height: .7rem !important;
