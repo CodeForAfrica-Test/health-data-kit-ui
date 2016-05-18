@@ -655,3 +655,42 @@ form {
 		}
 	}
 }
+
+/* when hiding the picture */
+.ng-hide-add         { animation:0.5s fadeOut ease; }
+
+/* when showing the picture */
+.ng-hide-remove      { animation:0.5s fadeIn ease; }
+
+/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+/* fade in */
+@keyframes fadeIn {
+  0% {
+  opacity: 0;
+  }
+
+  100% {
+  opacity: 1;
+  }
+}
+
+/* light speed out */
+@-webkit-keyframes fadeOut {
+  0% {
+  opacity: 1;
+  }
+
+  100% {
+  opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+  opacity: 1;
+  }
+
+  100% {
+  opacity: 0;
+  }
+}
