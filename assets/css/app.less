@@ -65,48 +65,6 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 200px;
 }
 
-@media only screen and (max-width: 320px) {
-	.wrapper-xxl {
-	    padding-left: 20px;
-	    padding-right: 20px;
-	}
-}
-
-@media only screen and (max-width: 360px) {
-	.wrapper-xxl {
-	    padding-left: 20px;
-	    padding-right: 20px;
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.wrapper-xxl {
-	    padding-left: 20px;
-	    padding-right: 20px;
-	}
-}
-@media only screen and (max-width: 640px) {
-	.wrapper-xxl {
-	    padding-left: 20px;
-	    padding-right: 20px;
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.wrapper-xxl {
-	    padding-left: 20px;
-	    padding-right: 20px;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-	.wrapper-xxl {
-	    padding-left: 20px;
-	    padding-right: 20px;
-	}
-}
-
-
 hr {
 	margin: 0 !important;
 	margin-bottom: 15px !important;
@@ -130,13 +88,12 @@ hr {
 	padding: 15px;
 	min-height: 100px;
 	color: grey;
+	float: left;
+	// max-width: 900px;
 
 	.div {
-		min-height: 100px;
-		padding-top: 15px;
-		padding-left: 30px;
-		padding-right: 30px;
-		padding-bottom: 30px; 
+		// min-height: 350px;
+		padding: 30px;
 		position: relative;
 
 		.form {
@@ -145,13 +102,14 @@ hr {
 
 		.details {
 			width: 100%;
-			height: 240px;
 			position: absolute;
 			background: rgba(255,255,255,0.95);
 			top: 0;
 			left: 0;
+			right: 0;
 			padding: 20px;
 			overflow: scroll;
+			border: 0;
 
 			p {
 				margin: 0;
@@ -186,6 +144,11 @@ hr {
 				background: #2D91D9;
 			}
 		}
+
+		.details.ng-hide-add {
+			animation:0.5s fadeOutDown ease;
+		}
+
 		.hospitalDetails {
 			width: 100%;
 			height: 240px;
@@ -195,28 +158,27 @@ hr {
 			background: #fff;
 			padding: 20px;
 		}	
+
+		.hospitalDetails.ng-hide-add {
+			animation:0.5s fadeOutDown ease;
+		}
 	}
 
 	@media only screen and (max-width: 320px) {
 		.div {
-		    border-right: none;
+			background: red;
 		}
 	}
 
-	@media only screen and (max-width: 1024px) {
-		
-	}
-
 	h4 {
-		font-size: 17px;
+		font-size: 24px;
 		color: rgba(0,0,0,0.8) !important;
 		
 	}
 
 	p {
-		font-size: 10px;
-		font-weight: bold;
-		letter-spacing: 0.06;
+		font-size: 12px;
+		letter-spacing: 0.06px;
 		color: rgba(0,0,0,0.36);
 		line-height: 5px;
 	}
@@ -225,7 +187,7 @@ hr {
 		width: 100%;
 		border: 1px solid #DEE5E7;
 		border-radius: 3px;
-		height: 39px;
+		height: 50px;
 		padding-left: 15px;
 		font-size: 12px;
 		letter-spacing: 1px;
@@ -237,7 +199,7 @@ hr {
 
 	.btn {
 		width: 100%;
-		height: 39px;
+		height: 50px;
 		outline: none;
 		font-size: 10px;
 		font-weight: 400;
