@@ -12,7 +12,7 @@ angular.module('app.controllers', [])
 		// console.log($scope.doctors.plain())
 	})
 
-	var inputMin = 3;
+	var inputMin = 1;
     $scope.search = function() {
     	if ($scope.doctorName && $scope.doctorName.length >= inputMin) {
             $scope.searching = true;
@@ -78,7 +78,7 @@ angular.module('app.controllers', [])
 
 	$scope.search = function() {
 	    	var address = $scope.hospital.name
-			var inputMin = 3;
+			var inputMin = 1;
 			
 	    	if ($scope.hospital.name && $scope.hospital.name.length >= inputMin) {
 	            // $scope.searching = true;
@@ -129,5 +129,10 @@ angular.module('app.controllers', [])
 
 	$scope.close = function() {
 		$scope.hospitalDetails = false;
+	}
+
+	$scope.closeList = function() {
+		$scope.hospitals = [];
+		$scope.load = false;
 	}
 })
