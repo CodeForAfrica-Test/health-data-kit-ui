@@ -4,8 +4,8 @@
 			<div class="div col-xs-12 col-sm-6 col-md-6 b-r m-n" ng-controller="dodgyDoctorsCtrl">
 				<h4>Dodgy Doctors</h4>
 				<hr/>
-				<p class="m-t-n-md">Check to see if your doctor is registered.</p>
-				<p class=""><i>Licensed and can't find your name? Click here</i></p>
+				<p class="l-h">Check to see if your doctor is registered.</p>
+				<p class="l-h"><i>Licensed and can't find your name? <a href="mailto:hello@codefornigeria.org?subject=Hello">click here</a></i></p>
 				<input type="text" placeholder="Doctor's name" ng-model="doctorName" class="input m-t-lg" ng-change="search()"></input>
 
 				<div class="col-md-10 result m-t no-padder" ng-show="searching">
@@ -68,35 +68,42 @@
 					<h5>Hospital Name</h5>
 					<p>{{hospital.facilityName}}</p>
 
-					<h5>Address</h5>
-					<p>{{hospital.address}}</p>
+					<h5>Medical personel</h5>
+					<p ng-if="numDoctorsFulltime">{{hospitalInfo.numDoctorsFulltime}} Doctors and {{hospitalInfo.numNursesFulltime}} Nurses</p>
+                	<p ng-if="!numDoctorsFulltime">Not available</p>
 
 					<h5>Community</h5>
 					<p>{{hospital.community}}</p>
 
+					<h5>Water supply</h5>
+					<p ng-if="improvedWaterSupply">Yes</p>
+					<p ng-if="!improvedWaterSupply ">No</p>
+
 					<h5>Management</h5>
 					<p>{{hospital.management}}</p>
+
+					<h5>Electricity</h5>
+                	<p ng-if="phcnElectricity">Yes</p>
+                	<p ng-if="!phcnElectricity ">No</p>
 
 					<h5>Ambulance</h5>
 					<p>{{hospital.management}}</p>
 
-					<h5>Management</h5>
-					<p>{{hospital.management}}</p>
+					<h5>Vaccine Fridge</h5>
+                	<p ng-if="vaccineFridge">Yes</p>
+                	<p ng-if="!vaccineFridge ">No</p>
 
-					<h5>Management</h5>
-					<p>{{hospital.management}}</p>
+					<h5>Malaria Treatment</h5>
+                	<p ng-if="malariaTreatmentArtemisinin">Yes</p>
+                	<p ng-if="!malariaTreatmentArtemisinin ">No</p>
 
-					<h5>Management</h5>
-					<p>{{hospital.management}}</p>
+					<h5>Birth Attendants</h5>
+                	<p ng-if="skilledBirthAttendant">Yes</p>
+                	<p ng-if="!skilledBirthAttendant ">No</p>
 
-					<h5>Management</h5>
-					<p>{{hospital.management}}</p>
-
-					<h5>Management</h5>
-					<p>{{hospital.management}}</p>
-
-					<h5>Management</h5>
-					<p>{{hospital.management}}</p>
+					<h5>Ambulance</h5>
+					<p ng-if="emergencyTransport">Yes</p>
+					<p ng-if="!emergencyTransport">No</p>
 				</div>
 			</div>
 		</div>
