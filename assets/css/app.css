@@ -277,3 +277,27 @@ hr {
   height: 80px;
   margin: 10px;
 }
+.post h2 {
+  text-transform: capitalize;
+  font-family: 'Raleway', Helvetica;
+  font-weight: 500 !important;
+  font-size: 39px;
+  color: #000 !important ;
+  margin-bottom: 50px !important;
+  -webkit-font-smoothing: antialiased;
+}
+.post img {
+  width: 100%;
+}
+.post p {
+  margin-top: 30px;
+  font-weight: 400;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  color: #333;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
