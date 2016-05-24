@@ -155,7 +155,7 @@ angular.module('app.controllers', [])
 .controller('articleReadCtrl', function($scope, Restangular, $stateParams) {
 	console.log($stateParams)
 	Restangular.one('content', $stateParams).get().then(function(response) {
-		$scope.articles = response;
+		$scope.article = response;
 		console.log(response)
 	})
 })
