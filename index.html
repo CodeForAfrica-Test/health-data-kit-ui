@@ -750,8 +750,7 @@
               </h3>
               <p class="flush-bottom inverse">
 
-                Sponsored by ICFJ through Code for Africa, SaharaHealth is brought to you in partnership with Code for Nigeria.<br />
-                Code for Nigeria is a non-profit civic technology movement.  A network of civic-minded volunteers who contribute their talents, skills, expertise, and community knowledge as technological tools to improve public service, bring governments to account, and promote informed (data-driven) decision-making; leveraging open data + media, and backed by a core (full-time) tech team.
+                SaharaHealth is a partnership between SaharaReporters and Code for Nigeria. The partnership uses publicly available data to empower citizens to identify if their doctor is a quack, gather information about medical services near them, and compare the price of medication. To report a quack or someone pretending to be a doctor contact <a href="mailto:editor@saharareporters.org?subject=Hello">editor@saharareporters.com</a> or <a href="mailto:dodgydoctors@codefornigeria.org?subject=Hello">dodgydoctor@codefornigeria.org</a>.
 
             </p>
 
@@ -766,9 +765,9 @@
           </h3>
 
           <div class="text-left partners">
-            <!-- <a href="http://www.codefornigeria.org/" target="_blank"><img src="img/cfn_logo.png"></a>
-            <a href="http://icfj.org" target="_blank"><img src="img/icfj.png"></a>
-            <a href="http://codeforafrica.org" target="_blank"><img src="img/cfafrica.png"></a> -->
+            <a href="http://www.codefornigeria.org/" target="_blank"><img src="assets/img/cfn_logo.png"></a>
+            <a href="http://icfj.org" target="_blank"><img src="assets/img/icfj.png"></a>
+            <a href="http://codeforafrica.org" target="_blank"><img src="assets/img/cfafrica.png"></a>
         </div>
 
     </div>
@@ -1177,5 +1176,18 @@
     ga('send', 'pageview');
     ga('sh.send', 'pageview');
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDQ6OKol_gOz_Gc-bZmeEhYNJ1VlHiNuF8",
+    authDomain: "healthkit-5bab0.firebaseapp.com",
+    databaseURL: "https://healthkit-5bab0.firebaseio.com",
+    storageBucket: "healthkit-5bab0.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+    
 </body>
 </html>

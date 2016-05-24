@@ -28,6 +28,11 @@ angular.module('app', [
     templateUrl: 'modules/home.html',
     controller: 'appCtrl'
   })
+    .state('article', {
+      url: '/:id',
+      templateUrl: 'modules/article.html',
+      controller: 'articleReadCtrl'
+    })  
 
   $urlRouterProvider.otherwise('/home')
 

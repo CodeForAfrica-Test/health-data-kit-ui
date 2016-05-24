@@ -1,11 +1,11 @@
-<div class="container m-b-lg m-t-lg">
-	<div class="row">
+<div class="container">
+	<div class="row m-b-xxl m-t-xxl">
 		<div class="col-md-8 col-md-offset-2 card no-padder">
 			<div class="div col-xs-12 col-sm-6 col-md-6 b-r m-n" ng-controller="dodgyDoctorsCtrl">
-				<h4>Dodgy Doctors</h4>
+				<h4><i class="fa fa-user-md"></i> Licensed Doctors</h4>
 				<hr/>
 				<p class="l-h">Check to see if your doctor is registered.</p>
-				<p class="l-h"><i>Licensed and can't find your name? <a href="mailto:hello@codefornigeria.org?subject=Hello">click here</a></i></p>
+				<p class="l-h"><i>Licensed and can't find your name? <a href="mailto:dodgydoctors@codefornigeria.org?subject=Hello"></a></i></p>
 				<input type="text" placeholder="Doctor's name" ng-model="doctorName" class="input m-t-lg" ng-change="search()"></input>
 
 				<div class="col-md-10 result m-t no-padder" ng-show="searching">
@@ -14,9 +14,10 @@
 					</li>
 				</div>
 
-				<button class="btn btn-primary m-t" ng-click="$parent.showDetail(doctor)" ng-disabled="!doctorName">Search</button>
+				<!-- <button class="btn btn-primary m-t" ng-click="$parent.showDetail(doctor)" ng-disabled="!doctorName">Search</button> -->
 
 				<div class="details animated fadeInUp" ng-show="detail">
+					<span class="badge"><i class="fa fa-check"></i> Registered Doctor</span>
 					<i class="fa fa-close pull-right clickable" ng-click="close()"></i>
 					<h5>Name</h5>
 					<p>{{information.name}}</p>
@@ -27,36 +28,46 @@
 					<h5>Address</h5>
 					<p>{{information.address}}</p>
 
-					<span class="badge">Registered Doctor</span>
-					<h6>See photo</h6>
+					
+					<h6 class="m-t-lg">See photo</h6>
 				</div>
 			</div>
 	
 			<div class="div col-xs-12 col-sm-6 col-md-6 m-n" ng-controller="hospitalFinderCtrl">
-				<h4>Hospital Finder</h4>
+				<h4><i class="fa fa-hospital-o"></i> Hospital Locator</h4>
 				<hr/>
 				<form name="hospitalFinder">
-					<select class="input" ng-model="hospital.service" required ng-disabled="load">
+					<select class="input" ng-model="hospital.service" ng-disabled="load">
 						<option value="">Choose a service</option>
-						<option value="Maternal health delivery">Maternal health delivery</option>
-						<option value="Ambulance">Ambulance</option>
-						<option value="Birth attendants">Birth attendants</option>
-						<option value="C section">C section</option>
-						<option value="Measles immunization">Measles immunization</option>
-						<option value="Ante-natal care">Ante-natal care</option>
-						<option value="Family planning">Family planning</option>
-						<option value="Malaria treatment">Malaria treatment</option>
+						<option value="">All / Any</option>
+						<option value="Maternal health delivery">Maternal Health Delivery</option>
+						<!-- <option value="Ambulance">Ambulance</option> -->
+						<option value="Birth attendants">Birth Attendants</option>
+						<option value="C section">C-Section</option>
+						<option value="Measles immunization">Measles Immunization</option>
+						<option value="Ante-natal care">Ante-natal Care</option>
+						<option value="Family planning">Family Planning</option>
+						<option value="Malaria treatment">Malaria Treatment</option>
 					</select>
-					<input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()" required ng-disabled="load"></input>
+					<div class="input-group">
+						<input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()" required ng-disabled="load">
+						<span class = "input-group-btn">
+		                 	<button class="btn btn-primary" type="button" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
+		                     	<span ng-show="!load">Go!</span>
+								<span ng-show="load"><i class="fa fa-spinner fa-spin"></i></span>
+		                 	</button>
+		               	</span>
+					</div>
+					<!-- <input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()" required ng-disabled="load"></input> -->
 					<div class="col-md-10 result m-t no-padder" ng-show="searching">
 						<li ng-repeat="result in results" ng-click="addLocation(result)">
 							{{result.formatted_address}}
 						</li>
 					</div>
-					<button class="btn btn-primary m-t" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
+					<!-- <button class="btn btn-primary m-t" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
 						<span ng-show="!load">Search</span>
 						<span ng-show="load"><i class="fa fa-spinner fa-spin"></i></span>
-					</button>
+					</button> -->
 				</form>
 
 				<div class="details animated fadeIn" ng-show="hospitals.length">
@@ -68,72 +79,52 @@
 					<h5>Hospital Name</h5>
 					<p>{{hospital.facilityName}}</p>
 
-					<h5>Medical personel</h5>
-					<p ng-if="numDoctorsFulltime">{{hospitalInfo.numDoctorsFulltime}} Doctors and {{hospitalInfo.numNursesFulltime}} Nurses</p>
-                	<p ng-if="!numDoctorsFulltime">Not available</p>
+					<h5>Facitily Type</h5>
+					<p>{{hospital.facilityTypeDisplay}}</p>
 
 					<h5>Community</h5>
 					<p>{{hospital.community}}</p>
 
+					<h5>Number of Doctors</h5>
+					<p ng-if="numDoctorsFulltime = true">{{hospital.numDoctorsFulltime}}</p>
+                	<p ng-if="numDoctorsFulltime = false">None</p>
+
+                	<h5>Number of Nurses</h5>
+					<p ng-if="numNursesFulltime = true">{{hospital.numNursesFulltime}}</p>
+                	<p ng-if="numNursesFulltime = false">None</p>
+
+                	<h5>Number of Midwives</h5>
+					<p ng-if="numNursesFulltime = true">{{hospital.numNurseMidwivesFulltime}}</p>
+                	<p ng-if="numNursesFulltime = false">None</p>
+
 					<h5>Water supply</h5>
-					<p ng-if="improvedWaterSupply">Yes</p>
-					<p ng-if="!improvedWaterSupply ">No</p>
+					<p ng-if="improvedWaterSupply = true">Yes</p>
+					<p ng-if="improvedWaterSupply = false">No</p>
 
 					<h5>Management</h5>
 					<p>{{hospital.management}}</p>
 
 					<h5>Electricity</h5>
-                	<p ng-if="phcnElectricity">Yes</p>
-                	<p ng-if="!phcnElectricity ">No</p>
+                	<p ng-if="phcnElectricity = true">Yes</p>
+                	<p ng-if="phcnElectricity = false">No</p>
 
 					<h5>Ambulance</h5>
-					<p>{{hospital.management}}</p>
+					<p ng-if="emergencyTransport = true">Yes</p>
+					<p ng-if="emergencyTransportn = false">No</p>
 
-					<h5>Vaccine Fridge</h5>
-                	<p ng-if="vaccineFridge">Yes</p>
-                	<p ng-if="!vaccineFridge ">No</p>
-
-					<h5>Malaria Treatment</h5>
-                	<p ng-if="malariaTreatmentArtemisinin">Yes</p>
-                	<p ng-if="!malariaTreatmentArtemisinin ">No</p>
-
-					<h5>Birth Attendants</h5>
-                	<p ng-if="skilledBirthAttendant">Yes</p>
-                	<p ng-if="!skilledBirthAttendant ">No</p>
-
-					<h5>Ambulance</h5>
-					<p ng-if="emergencyTransport">Yes</p>
-					<p ng-if="!emergencyTransport">No</p>
+					<h6><a href="https://maps.google.com/maps?q=loc:{{hospital.latitude}},{{hospital.longitude}}" target="_blank"`>Show map</a></h6>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row m-t-xxl">
-		<div class="col-md-4 news-card">
-			<div class="thumbnail-img"></div>
+	<div class="row m-t-xxl" ng-controller="articleCtrl">
+		<div class="col-md-6 news-card" ng-repeat="article in articles">
+			<div class="thumbnail-img" style="background-image: url('{{article.image}}');"></div>
 			<div class="summary">
-				<h3>Title</h3>
-	            <p>
-	                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie libero libero, porta lacinia diam fermentum a. Morbi eu magna lectus.
-	            </p>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="thumbnail-img"></div>
-			<div class="summary">
-				<h3>Title 2</h3>
-	            <p>
-	                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie libero libero, porta lacinia diam fermentum a. Morbi eu magna lectus.
-	            </p>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="thumbnail-img"></div>
-			<div class="summary">
-				<h3>Title 3</h3>
-	            <p>
-	                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie libero libero, porta lacinia diam fermentum a. Morbi eu magna lectus.
-	            </p>
+				<h3>{{article.title}}</h3>
+	            <p>{{article.image}}</p>
+
+	            <p class="clickable" ui-sref="article({id: article.id})">Read more..</p>
 			</div>
 		</div>
 	</div>
