@@ -147,7 +147,7 @@ angular.module('app.controllers', [])
 .controller('articleCtrl', function($scope, Restangular) {
 	Restangular.all('content').getList().then(function(response) {
 		$scope.articles = response;
-		// console.log(response)
+		console.log(response.plain())
 	})
 
 })
