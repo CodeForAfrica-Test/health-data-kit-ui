@@ -13,9 +13,6 @@ h6 {
 .p {
   padding: 15px !important;
 }
-.l-h {
-  line-height: 5px !important;
-}
 .m-r-lg {
   margin-right: 30px;
 }
@@ -41,7 +38,10 @@ h6 {
   margin-top: 40px;
 }
 .m-t-xxl {
-  margin-top: 50px;
+  margin-top: 80px;
+}
+.m-b-xxl {
+  margin-bottom: 80px;
 }
 .m-t-n-xxs {
   margin-top: -1px;
@@ -61,7 +61,7 @@ h6 {
 }
 hr {
   margin: 0 !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 35px !important;
   border-color: #DEE5E7;
 }
 .no-padder {
@@ -70,6 +70,9 @@ hr {
 .b-r {
   border-right: 1px solid #DEE5E7;
 }
+.b-b {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0785);
+}
 .clickable {
   cursor: pointer;
 }
@@ -77,12 +80,13 @@ hr {
   background: #fff;
   border: 1px solid #DEE5E7;
   padding: 15px;
-  min-height: 100px;
+  min-height: 294px;
   color: grey;
-  float: left;
 }
 .card .div {
   padding: 30px;
+  padding-top: 40px;
+  padding-bottom: 60px;
   position: relative;
 }
 .card .div .form {
@@ -107,6 +111,11 @@ hr {
   font-weight: 400;
   line-height: 15px !important;
   border-bottom: 1px solid #DEE5E7;
+  text-transform: capitalize !important;
+}
+.card .div .details .search-results:hover {
+  background: #43BEA7;
+  color: #fff;
 }
 .card .div .details .search-results:hover {
   background: #43BEA7;
@@ -121,7 +130,8 @@ hr {
 .card .div .details h6 {
   text-decoration: underline;
   cursor: pointer;
-  margin: 0 !important;
+  margin: 0;
+  margin-top: 30px;
 }
 .card .div .details .badge {
   font-size: 10px;
@@ -145,6 +155,9 @@ hr {
   background: #fff;
   padding: 20px;
   overflow: scroll;
+}
+.card .div .hospitalDetails p {
+  text-transform: capitalize;
 }
 .card .div .hospitalDetails.ng-hide-add {
   animation: 0.5s fadeOutDown ease;
@@ -176,6 +189,9 @@ hr {
   outline: none !important;
   margin: 0;
   background: none;
+}
+.card .add-on {
+  height: 50px !important;
 }
 .card .btn {
   width: 100%;
@@ -223,4 +239,39 @@ hr {
   background: #43BEA7;
   color: #fff;
   font-weight: 400;
+}
+.news-card {
+  margin-bottom: 100px;
+}
+.thumbnail-img {
+  width: 100%;
+  height: 200px ;
+  background: #000;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.summary {
+  width: 100%;
+  height: 300px;
+  padding-top: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.summary h3 {
+  text-transform: uppercase;
+  font-family: 'Raleway', Helvetica;
+  font-weight: 500 !important;
+  color: #000;
+}
+.summary p {
+  color: #333333;
+}
+.partners img {
+  height: 80px;
+  margin: 10px;
 }

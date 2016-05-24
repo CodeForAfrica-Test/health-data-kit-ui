@@ -12,79 +12,88 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 15px !important;
 }
 
-.l-h {
-	line-height: 5px !important;
-}
+
+// .l-h {
+// 	line-height: 10px !important;
+// }
 
 .m-r-lg {
 	margin-right: 30px;
 }
 
 .m-t {
-    margin-top: 15px !important;
+	margin-top: 15px !important;
 }
 
 .m-t-md {
-    margin-top: 21px !important;
+	margin-top: 21px !important;
 }
 
 .m-t-sm {
-    margin-top: 5px !important;
+	margin-top: 5px !important;
 }
 
 .m-t-lg {
-    margin-top: 30px !important;
+	margin-top: 30px !important;
 }
 
 .m-b-lg {
-    margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 .m-t-l {
-    margin-top: 34px;
+	margin-top: 34px;
 }
 
 .m-t-xl {
-    margin-top: 40px;
+	margin-top: 40px;
 }
 
 .m-t-xxl {
-    margin-top: 50px;
+	margin-top: 80px;
+}
+
+.m-b-xxl {
+	margin-bottom: 80px;
 }
 
 .m-t-n-xxs {
-    margin-top: -1px
+	margin-top: -1px
 }
 
 .m-t-n-xs {
-    margin-top: -5px
+	margin-top: -5px
 }
 
 .m-t-n-sm {
-    margin-top: -10px
+	margin-top: -10px
 }
 
 .m-t-n {
-    margin-top: -15px
+	margin-top: -15px
 }
 
 .wrapper-xxl {
-    padding-left: 200px;
-    padding-right: 200px;
+	padding-left: 200px;
+	padding-right: 200px;
 }
 
 hr {
 	margin: 0 !important;
-	margin-bottom: 15px !important;
+	margin-bottom: 35px !important;
 	border-color: #DEE5E7;
 }
 
 .no-padder {
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 .b-r {
 	border-right: 1px solid #DEE5E7;
+}
+
+.b-b {
+	border-bottom: 1px solid rgba(0,0,0,.0785);
 }
 
 .clickable {
@@ -94,14 +103,16 @@ hr {
 	background: #fff;
 	border: 1px solid #DEE5E7;
 	padding: 15px;
-	min-height: 100px;
+	min-height: 294px;
 	color: grey;
-	float: left;
+	// float: left;
 	// max-width: 900px;
 
 	.div {
 		// min-height: 350px;
 		padding: 30px;
+		padding-top: 40px;
+		padding-bottom: 60px;
 		position: relative;
 
 		.form {
@@ -127,6 +138,15 @@ hr {
 				font-weight: 400;
 				line-height: 15px !important;
 				border-bottom: 1px solid #DEE5E7;
+				text-transform: capitalize !important;
+				// color: red;
+			}
+
+			.search-results {
+				&:hover {
+					background: #43BEA7;
+					color: #fff;
+				}
 			}
 
 			.search-results {
@@ -146,7 +166,8 @@ hr {
 			h6 {
 				text-decoration: underline;
 				cursor: pointer;
-				margin: 0 !important;
+				margin: 0;
+				margin-top: 30px;
 			}
 			
 			.badge {
@@ -174,6 +195,10 @@ hr {
 			background: #fff;
 			padding: 20px;
 			overflow: scroll;
+
+			p {
+				text-transform: capitalize;
+			}
 		}	
 
 		.hospitalDetails.ng-hide-add {
@@ -212,6 +237,10 @@ hr {
 		outline: none !important;
 		margin: 0; 
 		background: none;
+	}
+
+	.add-on {
+		height: 50px !important;
 	}
 
 	.btn {
@@ -270,4 +299,46 @@ hr {
 		}
 	}
 }
+.news-card {
+	margin-bottom: 100px;
+}
 
+.thumbnail-img {
+	width: 100%;
+	height: 200px ;
+	background: #000;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.summary {
+	width: 100%;
+	height: 300px;
+	padding-top: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	h3 {
+		text-transform: uppercase;
+		font-family: 'Raleway', Helvetica;
+		font-weight: 500 !important;
+		color: #000;
+	}
+
+	p {
+		color: #333333;
+		
+	}
+}
+
+.partners {
+	img {
+		height: 80px;
+    	margin: 10px;
+	}
+}
