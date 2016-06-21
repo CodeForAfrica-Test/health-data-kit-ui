@@ -1,3 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', Helvetica;
+}
 //Utilities
 h1, h2, h3, h4, h5, h6 {
 	margin-top: 10px !important;
@@ -10,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .p {
 	padding: 15px !important;
+}
+
+a {
+	color: inherit;
 }
 
 
@@ -81,6 +92,10 @@ h1, h2, h3, h4, h5, h6 {
 	border-left: 1px solid #000;
 }
 
+.bg-black {
+	background: #000;
+}
+
 .wrapper-xxl {
 	padding-left: 200px;
 	padding-right: 200px;
@@ -90,6 +105,11 @@ hr {
 	margin: 0 !important;
 	margin-bottom: 35px !important;
 	border-color: #DEE5E7;
+}
+
+nav {
+	padding-left: 5%;
+	padding-right: 5%; 
 }
 
 .no-padder {
@@ -363,7 +383,7 @@ hr {
 
 	h3 {
 		text-transform: uppercase;
-		font-family: 'Raleway', Helvetica;
+		font-family: 'Open Sans', Helvetica;
 		font-weight: 500 !important;
 		color: #000;
 	}
@@ -384,7 +404,7 @@ hr {
 .post {
 	h2 {
 		text-transform: capitalize;
-		font-family: 'Raleway', Helvetica;
+		font-family: 'Open Sans', Helvetica;
 		font-weight: 500 !important;
 		font-size: 39px;
 		color: #000 !important ;
@@ -426,7 +446,7 @@ hr {
 		text-transform: uppercase;
 		cursor: pointer;
 		font-size: 13px;
-		font-weight: 600;
+		font-weight: 400;
 		line-height: 100px;
 		margin-left: 2%;
 
@@ -465,6 +485,10 @@ hr {
 
 	div {
 		min-height: 250px;
+
+		&:nth-of-type(2) {
+			text-transform: none;
+		}
 	}
 
 	.partners {
@@ -473,6 +497,7 @@ hr {
 
 	.footer-header {
 		color: #fff;
+		font-weight: 400;
 	}
 
 	.fa-twitter-square {
@@ -480,7 +505,7 @@ hr {
 		margin-right: 10px;
 	}
 	.fa-facebook-square {
-		color: blue;
+		color: #3B5998;
 		margin-right: 10px;
 	}
 }

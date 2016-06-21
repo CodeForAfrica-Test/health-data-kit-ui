@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', Helvetica;
+}
 h1,
 h2,
 h3,
@@ -12,6 +18,9 @@ h6 {
 }
 .p {
   padding: 15px !important;
+}
+a {
+  color: inherit;
 }
 .m-r-lg {
   margin-right: 30px;
@@ -61,6 +70,9 @@ h6 {
 .b-l {
   border-left: 1px solid #000;
 }
+.bg-black {
+  background: #000;
+}
 .wrapper-xxl {
   padding-left: 200px;
   padding-right: 200px;
@@ -69,6 +81,10 @@ hr {
   margin: 0 !important;
   margin-bottom: 35px !important;
   border-color: #DEE5E7;
+}
+nav {
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .no-padder {
   padding: 0 !important;
@@ -294,7 +310,7 @@ hr {
 }
 .summary h3 {
   text-transform: uppercase;
-  font-family: 'Raleway', Helvetica;
+  font-family: 'Open Sans', Helvetica;
   font-weight: 500 !important;
   color: #000;
 }
@@ -307,7 +323,7 @@ hr {
 }
 .post h2 {
   text-transform: capitalize;
-  font-family: 'Raleway', Helvetica;
+  font-family: 'Open Sans', Helvetica;
   font-weight: 500 !important;
   font-size: 39px;
   color: #000 !important ;
@@ -345,7 +361,7 @@ hr {
   text-transform: uppercase;
   cursor: pointer;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 100px;
   margin-left: 2%;
 }
@@ -380,18 +396,22 @@ hr {
 .footer div {
   min-height: 250px;
 }
+.footer div:nth-of-type(2) {
+  text-transform: none;
+}
 .footer .partners {
   min-height: 100px;
 }
 .footer .footer-header {
   color: #fff;
+  font-weight: 400;
 }
 .footer .fa-twitter-square {
   color: skyblue;
   margin-right: 10px;
 }
 .footer .fa-facebook-square {
-  color: blue;
+  color: #3B5998;
   margin-right: 10px;
 }
 .logo {
