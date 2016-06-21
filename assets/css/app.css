@@ -55,6 +55,12 @@ h6 {
 .m-t-n {
   margin-top: -15px;
 }
+.p-t-lg {
+  padding-top: 80px;
+}
+.b-l {
+  border-left: 1px solid #000;
+}
 .wrapper-xxl {
   padding-left: 200px;
   padding-right: 200px;
@@ -75,6 +81,28 @@ hr {
 }
 .clickable {
   cursor: pointer;
+}
+.hero {
+  width: 100%;
+  min-height: 350px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  background-image: linear-gradient(rgba(51, 105, 232, 0.85), rgba(51, 105, 232, 0.85)), url("http://tweet-senate.herokuapp.com/assets/senate-f3c5463087d1661a3938f422cfd2200edbf064d77306e1f8665f71e050a0ffcc.png");
+  background-position: center;
+}
+.hero .header {
+  font-size: 56px;
+  font-weight: 900;
+  color: #FFF;
+}
+.hero .b-b {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.hero .sub-header {
+  font-size: 24px;
+  font-weight: 300;
+  color: #FFF;
 }
 .card {
   background: #fff;
@@ -300,4 +328,76 @@ hr {
   color: #333;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
+}
+.tool-bar {
+  height: 100px;
+  background: transparent;
+  position: relative;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  line-height: 100px;
+}
+.tool-bar li {
+  list-style: none;
+  float: right;
+  color: grey;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 100px;
+  margin-left: 2%;
+}
+.tool-bar li:hover {
+  color: #000;
+}
+.tool-bar .divider {
+  height: 40px;
+  width: 1%;
+  margin-top: 30px;
+}
+.footer {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  text-transform: capitalize;
+  background: #000;
+  color: grey;
+  padding: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.footer img {
+  height: 50px;
+  margin: 10px;
+}
+.footer hr {
+  border: none;
+  border-top: 1px solid #E5E5E4;
+  opacity: 0.5;
+}
+.footer div {
+  min-height: 250px;
+}
+.footer .partners {
+  min-height: 100px;
+}
+.footer .footer-header {
+  color: #fff;
+}
+.footer .fa-twitter-square {
+  color: skyblue;
+  margin-right: 10px;
+}
+.footer .fa-facebook-square {
+  color: blue;
+  margin-right: 10px;
+}
+.logo {
+  height: 60px;
+  margin: 10px;
+  margin-top: 20px;
+  margin-left: 0;
+  float: left;
 }
