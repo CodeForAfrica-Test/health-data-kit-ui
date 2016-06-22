@@ -105,7 +105,7 @@ nav {
   text-align: center;
   z-index: 1;
   background-image: linear-gradient(rgba(51, 105, 232, 0.85), rgba(51, 105, 232, 0.85)), url("../img/hospital.png");
-  background-position: center;
+  background-size: 100% 350px;
   background-repeat: no-repeat;
 }
 .hero .header {
