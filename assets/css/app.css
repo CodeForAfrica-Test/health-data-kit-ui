@@ -104,8 +104,9 @@ nav {
   position: relative;
   text-align: center;
   z-index: 1;
-  background-image: linear-gradient(rgba(51, 105, 232, 0.85), rgba(51, 105, 232, 0.85)), url("http://tweet-senate.herokuapp.com/assets/senate-f3c5463087d1661a3938f422cfd2200edbf064d77306e1f8665f71e050a0ffcc.png");
+  background-image: linear-gradient(rgba(51, 105, 232, 0.85), rgba(51, 105, 232, 0.85)), url("../img/hospital.png");
   background-position: center;
+  background-repeat: no-repeat;
 }
 .hero .header {
   font-size: 56px;
