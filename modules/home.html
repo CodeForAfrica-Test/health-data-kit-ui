@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row m-b-xxl m-t-xxl">
+	<div class="row">
 		<div class="col-md-8 col-md-offset-2 card no-padder">
 			<div class="div col-xs-12 col-sm-6 col-md-6 b-r m-n" ng-controller="dodgyDoctorsCtrl">
 				<h4><i class="fa fa-user-md"></i> Licensed Doctors</h4>
@@ -41,7 +41,6 @@
 						<option value="">Choose a service</option>
 						<option value="">All / Any</option>
 						<option value="Maternal health delivery">Maternal Health Delivery</option>
-						<!-- <option value="Ambulance">Ambulance</option> -->
 						<option value="Birth attendants">Birth Attendants</option>
 						<option value="C section">C-Section</option>
 						<option value="Measles immunization">Measles Immunization</option>
@@ -58,16 +57,11 @@
 							</button>
 						</span>
 					</div>
-					<!-- <input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()" required ng-disabled="load"></input> -->
 					<div class="col-md-10 result m-t no-padder" ng-show="searching">
 						<li ng-repeat="result in results" ng-click="addLocation(result)">
 							{{result.formatted_address}}
 						</li>
 					</div>
-					<!-- <button class="btn btn-primary m-t" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
-						<span ng-show="!load">Search</span>
-						<span ng-show="load"><i class="fa fa-spinner fa-spin"></i></span>
-					</button> -->
 				</form>
 
 				<div class="details animated fadeIn" ng-show="hospitals.length">

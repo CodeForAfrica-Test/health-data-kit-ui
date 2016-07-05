@@ -36,6 +36,10 @@ a {
 	margin-top: 15px !important;
 }
 
+.p-t-md {
+	padding-top: 30px;
+}
+
 .m-t-md {
 	margin-top: 21px !important;
 }
@@ -107,10 +111,10 @@ hr {
 	border-color: #DEE5E7;
 }
 
-nav {
-	padding-left: 5%;
-	padding-right: 5%; 
-}
+// nav {
+// 	padding-left: 5%;
+// 	padding-right: 5%; 
+// }
 
 .no-padder {
 	padding: 0 !important;
@@ -128,21 +132,22 @@ nav {
 	cursor: pointer;
 }
 
+.btn-blue {
+	background: rgba(0,0,0,.0785);
+}
+
 .hero {
 	width: 100%;
-	min-height: 350px;
+	min-height: 200px;
 	position: relative;
 	text-align: center;
 	z-index: 1;
-	background-image: linear-gradient(rgba(51,105,232,0.85), rgba(51,105,232,0.85)), url("../img/hospital.png");
-	// background-position: cover;
-	background-size: 100% 350px;
-	background-repeat: no-repeat;
+	background: none;
 
 	.header {
 		font-size: 56px;
 		font-weight: 900;
-		color: #FFF;
+		color: rgb(51,105,232);
 	}
 
 	.b-b {
@@ -152,7 +157,7 @@ nav {
 	.sub-header {
 		font-size: 24px;
 		font-weight: 300;
-		color: #FFF;
+		color: #000;
 		// text-transform: capitalize;
 	}
 }
@@ -308,7 +313,7 @@ nav {
 		font-size: 10px;
 		font-weight: 400;
 		letter-spacing: 0.06;
-		background: #43BEA7;
+		// background: #43BEA7;
 		border: 0;
 		border-radius: 3px;
 	}
@@ -463,10 +468,11 @@ nav {
 		margin-top: 30px;
 	}
 }
+
 .footer {
 	width: 100%;
 	height: auto;
-	margin-top: 100px;
+	margin-top: 0;
 	// text-transform: capitalize;
 	background: #000;
 	color: grey;
