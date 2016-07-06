@@ -111,7 +111,7 @@ hr {
 .hero .header {
   font-size: 56px;
   font-weight: 900;
-  color: #3369e8;
+  color: #0B5D97;
 }
 .hero .b-b {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -379,7 +379,7 @@ hr {
   margin-top: 0;
   background: #000;
   color: grey;
-  padding: 50px;
+  padding: 30px;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -393,7 +393,7 @@ hr {
   opacity: 0.5;
 }
 .footer div {
-  min-height: 250px;
+  min-height: 200px;
 }
 .footer div:nth-of-type(2) {
   text-transform: none;
