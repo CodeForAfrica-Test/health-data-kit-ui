@@ -1,13 +1,6 @@
 angular.module('app.controllers', [])
   
-.controller('appCtrl', function($scope, Restangular) {
-	Restangular.all('hospital').getList().then(function(response) {
-		
-		$scope.clinics = response;
-		console.log($scope.clinics.plain())
-	})
-
-})
+.controller('appCtrl', function($scope, Restangular) {})
 
 .factory('MockAPI', ['Restangular', function(Restangular) {
     return Restangular.withConfig(function(RestangularConfigurer) {
@@ -17,9 +10,7 @@ angular.module('app.controllers', [])
 
 .controller('dodgyDoctorsCtrl', function($scope, Restangular) {
 	Restangular.all('doctor').getList().then(function(response) {
-		
 		$scope.doctors = response;
-		// console.log($scope.doctors.plain())
 	})
 
 	var inputMin = 1;
@@ -28,7 +19,6 @@ angular.module('app.controllers', [])
             $scope.searching = true;
             Restangular.one('doctor/search').get({name: $scope.doctorName}).then(function(response){
                 $scope.results = response;
-                // console.log(response)
              }, function(error){
                 $scope.error = error;
             });
@@ -39,7 +29,6 @@ angular.module('app.controllers', [])
 
 	$scope.showDetail = function(result) {
 		$scope.information = result;
-		// console.log($scope.detail)
 		$scope.searching = false;
 		$scope.detail = true;
 	}
@@ -50,31 +39,29 @@ angular.module('app.controllers', [])
 })
 
 .controller('hospitalFinderCtrl', function($scope, Restangular, $http) {
-
 	$scope.search = function() {
-	    	var address = $scope.hospital.name
-			var inputMin = 1;
+	    var address = $scope.hospital.name
+		var inputMin = 1;
 			
-	    	if ($scope.hospital.name && $scope.hospital.name.length >= inputMin) {
-	            // $scope.searching = true;
-			    $http({
-			        method: 'GET',
-			        url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
+	    if ($scope.hospital.name && $scope.hospital.name.length >= inputMin) {
+			$http({
+			    method: 'GET',
+			    url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
 			                         address + '&key=AIzaSyCq_hPKdxEybYoangnVh1Fs_ARyjnmdSqs' + '&sensor=false&components=country:NG',
 
-			        transformRequest: function(data, headersGetter) {
-			            var headers = headersGetter();
+			    transformRequest: function(data, headersGetter) {
+			        var headers = headersGetter();
 
-			            delete headers['Authorization'];
+			        delete headers['Authorization'];
 
-			            return headers;
-			        }
-			    }).then(function(results){
-			    	$scope.searching = true;
-			    	$scope.results = results.data.results;
-				})
-	        } else {
-               $scope.searching = false;
+			        return headers;
+			    }
+			}).then(function(results){
+			   	$scope.searching = true;
+			   	$scope.results = results.data.results;
+			})
+	    } else {
+            $scope.searching = false;
           } 	   
 	    }
 
@@ -82,7 +69,6 @@ angular.module('app.controllers', [])
 		$scope.hospital.name = result.formatted_address;
 		$scope.hospital.latitude = result.geometry.location.lat;
 		$scope.hospital.longitude = result.geometry.location.lng;
-		// console.log(result.formatted_address);
 		$scope.searching = false;
 	}
 
@@ -90,7 +76,6 @@ angular.module('app.controllers', [])
 		$scope.load = true;
 		Restangular.all('hospital/search').post($scope.hospital).then(function(response) {
 			$scope.hospitals = response;
-			// console.log(response.plain())
 		}), function(error){
             $scope.error = error;
             console.log(error)
@@ -116,7 +101,6 @@ angular.module('app.controllers', [])
 .controller('articleCtrl', function($scope, Restangular) {
 	Restangular.all('content').getList().then(function(response) {
 		$scope.articles = response;
-		// console.log(response.plain())
 	})
 
 })
@@ -125,6 +109,5 @@ angular.module('app.controllers', [])
 	console.log($stateParams)
 	Restangular.one('content', $stateParams.id).get().then(function(response) {
 		$scope.article = response;
-		console.log(response)
 	})
 })
