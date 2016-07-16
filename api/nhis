@@ -1,0 +1,1064 @@
+[
+  {
+    "S/N": 1,
+    "HCP CODE": "AB/0001",
+    "NAME": "Sancta Maria Specialist & Mat.",
+    "ADDRESS": "22 Constitutition Crescent Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 2,
+    "HCP CODE": "AB/0003",
+    "NAME": "Janet Memorial Hospital",
+    "ADDRESS": "245 Aba-Owerri Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 3,
+    "HCP CODE": "AB/0004",
+    "NAME": "Abia State University Teaching Hospital",
+    "ADDRESS": "Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 4,
+    "HCP CODE": "AB/0005",
+    "NAME": "Life Care Clinics Ltd",
+    "ADDRESS": "8, Ezinkwu Street, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 5,
+    "HCP CODE": "AB/0006",
+    "NAME": "New Era Specialist Hospital",
+    "ADDRESS": "213/215 Ezikiwe Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 6,
+    "HCP CODE": "AB/0007",
+    "NAME": "John Okorie Memorial Hospital",
+    "ADDRESS": "12-14 Akabuogu Street Off P.H. Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 7,
+    "HCP CODE": "AB/0008",
+    "NAME": "St.Anthony's Hospital",
+    "ADDRESS": "62/80 Etche Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 8,
+    "HCP CODE": "AB/0012",
+    "NAME": "Ucheoma Hospital",
+    "ADDRESS": "53 Ehi Road, Aba",
+    "TYPE OF SERVICE": "O & G",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 9,
+    "HCP CODE": "AB/0013",
+    "NAME": "Delta Hospital Ltd.",
+    "ADDRESS": "78, Faulks Road",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 10,
+    "HCP CODE": "AB/0014",
+    "NAME": "Federal Medical Centre, Umuahia",
+    "ADDRESS": "Umuahia, Abia State",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 11,
+    "HCP CODE": "AB/0015",
+    "NAME": "Obioma Hospital & Maternity",
+    "ADDRESS": "21, School Road, Umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 12,
+    "HCP CODE": "AB/0016",
+    "NAME": "Priscillia Memorial Hospital",
+    "ADDRESS": "32, Bunny Street",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 13,
+    "HCP CODE": "AB/0018",
+    "NAME": "General Hospital, Ama-Achara",
+    "ADDRESS": "Ama-Achara, Umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 14,
+    "HCP CODE": "AB/0019",
+    "NAME": "Mendel Hospital & Diagnostic Centre Limited",
+    "ADDRESS": "20 Tenant Road, Abia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 15,
+    "HCP CODE": "AB/0020",
+    "NAME": "Clehansan Hospital & Maternity",
+    "ADDRESS": "17 Osusu Rd, Aba.",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 16,
+    "HCP CODE": "AB/0022",
+    "NAME": "Alpha Inland Hospital",
+    "ADDRESS": "36 Glass Industry Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Obingwa",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 17,
+    "HCP CODE": "AB/0023",
+    "NAME": "Todac Clinic Ltd.",
+    "ADDRESS": "59/61 Okigwe Road,Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 18,
+    "HCP CODE": "AB/0024",
+    "NAME": "Living Word Hospital",
+    "ADDRESS": "5/7 Umuocham Street, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 19,
+    "HCP CODE": "AB/0025",
+    "NAME": "Living Word Hospital",
+    "ADDRESS": "117 Ikot Ekpene Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Obingwa",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 20,
+    "HCP CODE": "AB/0027",
+    "NAME": "Ebemma Hospital",
+    "ADDRESS": "3rd Avenue, Ubani Estate Ogbor Hill, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 21,
+    "HCP CODE": "AB/0028",
+    "NAME": "Horstman Hospital",
+    "ADDRESS": "32, Okigwe Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 22,
+    "HCP CODE": "AB/0030",
+    "NAME": "Princess Mary Specialist Hospital",
+    "ADDRESS": "45, New Umuahia Road Ogbor Hill, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 23,
+    "HCP CODE": "AB/0031",
+    "NAME": "Austin Grace Hospital",
+    "ADDRESS": "16, Okigwe Road, Aba",
+    "TYPE OF SERVICE": "-",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 24,
+    "HCP CODE": "AB/0034",
+    "NAME": "St. Paul Hospital",
+    "ADDRESS": "6-12 St. Paul's Road, Umunggasi, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 25,
+    "HCP CODE": "AB/0035",
+    "NAME": "Seven Days Adventist Hospital",
+    "ADDRESS": "Umuoba Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 26,
+    "HCP CODE": "AB/0036",
+    "NAME": "New Lead Hospital & Mat. Ltd",
+    "ADDRESS": "10, Oblagu Ave/By 160 Faulks Road, Aba.",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 27,
+    "HCP CODE": "AB/0037",
+    "NAME": "Chidinma Hospital",
+    "ADDRESS": "18 Awkusu Lane Umuahia, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 28,
+    "HCP CODE": "AB/0038",
+    "NAME": "Hammersmith Medical Centre",
+    "ADDRESS": "Plots 3 Amauzkwu Layout, Umauhia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 29,
+    "HCP CODE": "AB/0039",
+    "NAME": "St. Vincent's Hospital",
+    "ADDRESS": "30 Azikwe Road Umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 30,
+    "HCP CODE": "AB/0041",
+    "NAME": "New Era Hospital & Maternity",
+    "ADDRESS": "90b Oji River Street Umuzukwu Layout",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 31,
+    "HCP CODE": "AB/0048",
+    "NAME": "Dickson Orthopaedic Hospital",
+    "ADDRESS": "Awam Close Off 183, Aba Rd., Abayi, Aba",
+    "TYPE OF SERVICE": "Orthopaedic",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 32,
+    "HCP CODE": "AB/0049",
+    "NAME": "Nnenna Specialist Hospital",
+    "ADDRESS": "1 Amos Close, Umule, Aba",
+    "TYPE OF SERVICE": "Surgery, Laboratory",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 33,
+    "HCP CODE": "AB/0053",
+    "NAME": "Princess Mary Specialist Hospital",
+    "ADDRESS": "45 New Umuahia Road, Aba",
+    "TYPE OF SERVICE": "O & G, Paediatrics",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 34,
+    "HCP CODE": "AB/0056",
+    "NAME": "Delta Eye Hospital",
+    "ADDRESS": "Umuahia",
+    "TYPE OF SERVICE": "Ophthalmology",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 35,
+    "HCP CODE": "AB/0057",
+    "NAME": "Restoration Specialist Clinic",
+    "ADDRESS": "No. 1 Niger Road/Crowther Str. Umuahia",
+    "TYPE OF SERVICE": "Cardiology",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 36,
+    "HCP CODE": "AB/0058",
+    "NAME": "Riza Pharmacy Ltd.",
+    "ADDRESS": "141, Okigwe Road Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 37,
+    "HCP CODE": "AB/0059",
+    "NAME": "Bencare Pharmacy Nig. Ltd.",
+    "ADDRESS": "26 Faulks Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 38,
+    "HCP CODE": "AB/0060",
+    "NAME": "Banthas Pharmacy & Stores Ltd.",
+    "ADDRESS": "93, Okigwe Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 39,
+    "HCP CODE": "AB/0061",
+    "NAME": "Scanar Pharmacy (Nig.) Ltd",
+    "ADDRESS": "22 Faulks Road, Aba",
+    "TYPE OF SERVICE": "Pharmary",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 40,
+    "HCP CODE": "AB/0062",
+    "NAME": "Ceeje Pharmacy",
+    "ADDRESS": "Mbalse Owerri Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 41,
+    "HCP CODE": "AB/0063",
+    "NAME": "Model Pharmacy",
+    "ADDRESS": "38 Jubilee Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 42,
+    "HCP CODE": "AB/0064",
+    "NAME": "Elegance Pharmacy",
+    "ADDRESS": "37 Jubilee Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 43,
+    "HCP CODE": "AB/0065",
+    "NAME": "Cinta Pharmacy",
+    "ADDRESS": "1 Okigwe Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 44,
+    "HCP CODE": "AB/0066",
+    "NAME": "Chidi Pharmacy Co. (Nig.) Ltd.",
+    "ADDRESS": "140 Ikot Ekpene Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Obingwa",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 45,
+    "HCP CODE": "AB/0067",
+    "NAME": "Diamond Pharmacy Chemist Ltd.",
+    "ADDRESS": "2 Umule Street Off Faulk Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 46,
+    "HCP CODE": "AB/0068",
+    "NAME": "Alee Pharmaceuticals Ltd.",
+    "ADDRESS": "37, Jubilee Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 47,
+    "HCP CODE": "AB/0069",
+    "NAME": "Fatiwa Pharmacy Ltd.",
+    "ADDRESS": "62, Aba Owo Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 48,
+    "HCP CODE": "AB/0070",
+    "NAME": "Benkay Pharmacy Chemist Ltd.",
+    "ADDRESS": "106, Hospital Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 49,
+    "HCP CODE": "AB/0071",
+    "NAME": "Rufus Obi Chemist Ltd.",
+    "ADDRESS": "Rochem House 140 Aba-Owerri Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 50,
+    "HCP CODE": "AB/0072",
+    "NAME": "Eddy-T Pharmacy Ltd.",
+    "ADDRESS": "106, Hospital Road, Aba, 208 Azikiwe Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 51,
+    "HCP CODE": "AB/0073",
+    "NAME": "Em-Chemists Ltd.",
+    "ADDRESS": "79 Aba -Owerri Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 52,
+    "HCP CODE": "AB/0074",
+    "NAME": "Mainland Pharmacy Co. Ltd.",
+    "ADDRESS": "39 Azikiwe Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 53,
+    "HCP CODE": "AB/0076",
+    "NAME": "Far & Co Pharmacy Stores Nig. Ltd.",
+    "ADDRESS": "38 jubilee Road, Aba",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 54,
+    "HCP CODE": "AB/0077",
+    "NAME": "Unicare Pharmacy Ltd.",
+    "ADDRESS": "44, Awolowo Street, Umuahia",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 55,
+    "HCP CODE": "AB/0078",
+    "NAME": "C & J Pharmacy Ltd.",
+    "ADDRESS": "No. 2 Item Street, Umuahia",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 56,
+    "HCP CODE": "AB/0079",
+    "NAME": "Nneoma Pharmacy Co. Ltd.",
+    "ADDRESS": "8 Warri Street/Owerri Road, Umuahia.",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 57,
+    "HCP CODE": "AB/0080",
+    "NAME": "Barata Pharmacy & Co Ltd.",
+    "ADDRESS": "1 Ikot Ekpene Road, Umuahia",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Obingwa",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 58,
+    "HCP CODE": "AB/0082",
+    "NAME": "Curtis Laboratories",
+    "ADDRESS": "39 Ekenna Avennue, Aba",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 59,
+    "HCP CODE": "AB/0083",
+    "NAME": "Ojec Clinical Laboratory",
+    "ADDRESS": "64, cameroun Road, Aba",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 60,
+    "HCP CODE": "AB/0084",
+    "NAME": "Streamlight Biomedical Lab.",
+    "ADDRESS": "49C Umuahia Road, Aba",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 61,
+    "HCP CODE": "AB/0085",
+    "NAME": "Steve Fort Medical Lab. Services",
+    "ADDRESS": "30 Jubilee Road, Aba",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 62,
+    "HCP CODE": "AB/0086",
+    "NAME": "Excellence Medical Diag. Lab.",
+    "ADDRESS": "1 Okigwe Road, Aba",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 63,
+    "HCP CODE": "AB/0087",
+    "NAME": "Taag Medical Laboratory",
+    "ADDRESS": "2 Bende Road, Umuahia",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 64,
+    "HCP CODE": "AB/0088",
+    "NAME": "Gardenia Laboratory Nig. Ltd.",
+    "ADDRESS": "2 Ohafia Street, Umauahia",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 65,
+    "HCP CODE": "AB/0089",
+    "NAME": "Hammersmith Medical Centre",
+    "ADDRESS": "Plot 3, Amauzukwu Layout, Umuahia",
+    "TYPE OF SERVICE": "Internal Medicine, Endocrinology",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 66,
+    "HCP CODE": "AB/0090",
+    "NAME": "DSS Clinic",
+    "ADDRESS": "Umuahia, Abia State",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 67,
+    "HCP CODE": "AB/0092",
+    "NAME": "Child Health Consultant Clinic",
+    "ADDRESS": "73, Okigwe Road, Aba, Abia State",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 68,
+    "HCP CODE": "AB/0093",
+    "NAME": "Cottage Hospital/Comprehensive Health Centre",
+    "ADDRESS": "Abia State Police Command, Abia State",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 69,
+    "HCP CODE": "AB/0094",
+    "NAME": "Sick bay NNLS Owerenta",
+    "ADDRESS": "Abia, Abia State",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 70,
+    "HCP CODE": "AB/0095",
+    "NAME": "The Nazareth Clinics",
+    "ADDRESS": "57 Pound Road, Aba. Abia State",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 71,
+    "HCP CODE": "AB/0096",
+    "NAME": "Sacred Heart Hospital",
+    "ADDRESS": "9 Egwand Street by 18A Jaja Street, Off P/Harcourt Road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 72,
+    "HCP CODE": "AB/0097",
+    "NAME": "Isaac Okwuonu Memorial Hospital",
+    "ADDRESS": "155 Ikot-Ekpene Road, Ogbor Hill, Aba.",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 73,
+    "HCP CODE": "AB/0098",
+    "NAME": "Spring Clinic",
+    "ADDRESS": "18 Scotland Crescent, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 74,
+    "HCP CODE": "AB/0099",
+    "NAME": "Confidence Medical Diagnostic Centre",
+    "ADDRESS": "4 Azikiwe Road/25 Ojike Street, Umuahia. Abia State",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Umuahia South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 75,
+    "HCP CODE": "AB/0100",
+    "NAME": "St. Anthonys Hospital Ltd.",
+    "ADDRESS": "62/80 Etshe Road, Aba, Abia State",
+    "TYPE OF SERVICE": "Gen. surgery, Laboratory, Radiology, Orthopaedics, Ultrasound",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 76,
+    "HCP CODE": "AB/0101",
+    "NAME": "The Nasareth Clinics",
+    "ADDRESS": "57 Pound Road, Aba",
+    "TYPE OF SERVICE": "O&G",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 77,
+    "HCP CODE": "AB/0102",
+    "NAME": "New Convenant Med. Lab. & Blood Bank",
+    "ADDRESS": "8 Okigwe Road, Aba, Abia State",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 78,
+    "HCP CODE": "AB/0103",
+    "NAME": "Adamor Nig. Ltd",
+    "ADDRESS": "44 Okigwe Road, Aba, Abia State",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 79,
+    "HCP CODE": "AB/0104",
+    "NAME": "National Root Crops Research Institute Staff Clinic, Umudike",
+    "ADDRESS": "Umudike, Umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 80,
+    "HCP CODE": "AB/0107",
+    "NAME": "Healing Cross Hospital",
+    "ADDRESS": "Kilometre 2 Bende Road, Umuahia, Abia State",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 81,
+    "HCP CODE": "AB/0109",
+    "NAME": "ALL Saints hospital",
+    "ADDRESS": "25 Item street, umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 82,
+    "HCP CODE": "AB/0110",
+    "NAME": "Aloma specialist hospital",
+    "ADDRESS": "9(108) aba road, umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 83,
+    "HCP CODE": "AB/0111",
+    "NAME": "Best care specialist hospital",
+    "ADDRESS": "6, madukwe close off Ahuanya Av. Umungasi, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 84,
+    "HCP CODE": "AB/0112",
+    "NAME": "Divine grace missionary hospital",
+    "ADDRESS": "49, Azikwe road, Aba",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 85,
+    "HCP CODE": "AB/0113",
+    "NAME": "El-Shaddai hospital",
+    "ADDRESS": "40 AHOADA STREET, UMUAHIA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 86,
+    "HCP CODE": "AB/0114",
+    "NAME": "EVANGEL HOSPITAL",
+    "ADDRESS": "2, NWEKE /7 NWAORUAKU STR, UMUNGASI, ABA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 87,
+    "HCP CODE": "AB/0115",
+    "NAME": "GLORY OF GOD HOSPITAL",
+    "ADDRESS": "OWAZA TOWN, ABIA STATE",
+    "TYPE OF SERVICE": "",
+    "LGA": "Ukwa West",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 88,
+    "HCP CODE": "AB/0116",
+    "NAME": "GROUP MEDICAL PRACTICE",
+    "ADDRESS": "1,EMUCHAY CLOSE OFF AZUKA DRIVE, OGBO HILL ABA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 89,
+    "HCP CODE": "AB/0117",
+    "NAME": "Harvey Clinic",
+    "ADDRESS": "14, HOWELL''''S CRESCENT, ABA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 90,
+    "HCP CODE": "AB/0118",
+    "NAME": "MARGARET HOSPITAL",
+    "ADDRESS": "45 FINBARR''''S ROAD, UMUAHIA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 91,
+    "HCP CODE": "AB/0119",
+    "NAME": "ORIBIS HOSPITAL",
+    "ADDRESS": "25, UMUOJIMA STREET/MCC ROAD, ABAYI, ABIA STATE",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 92,
+    "HCP CODE": "AB/0120",
+    "NAME": "REGENTS CROSS SPEC. HOSPITAL",
+    "ADDRESS": "106, IKOT EKPENE ROAD, ABA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 93,
+    "HCP CODE": "AB/0121",
+    "NAME": "RESTORATION CLINIC AND MATERNITY",
+    "ADDRESS": "24, EYINNAYA STREET,ABIABA, ABAYI, ABIA STATE",
+    "TYPE OF SERVICE": "",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 94,
+    "HCP CODE": "AB/0122",
+    "NAME": "ST. MICHAEL'S HOSPITAL",
+    "ADDRESS": "PLOT 25, ONYEMAOBI LAYOUT, UMUAHIA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 95,
+    "HCP CODE": "AB/0123",
+    "NAME": "SUNSHINE HOSPITAL",
+    "ADDRESS": "KM1 IKOT EKPENE ROAD, UMUAHIA",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 96,
+    "HCP CODE": "AB/0126",
+    "NAME": "BESTCARE SPEC. HOSPITAL & MATERNITY",
+    "ADDRESS": "6 MADUKWE CLOSE OFF AHUNANYA AVE; UMUNGASI ABA",
+    "TYPE OF SERVICE": "O & G",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 97,
+    "HCP CODE": "AB/0127",
+    "NAME": "DANIPHARM",
+    "ADDRESS": "BY 54 FAULKS RD, ABA",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 98,
+    "HCP CODE": "AB/0128",
+    "NAME": "DENNIS BLESSING HOSPITAL",
+    "ADDRESS": "15 OHAFIA STR, UMUAHIA",
+    "TYPE OF SERVICE": "O & G",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 99,
+    "HCP CODE": "AB/0129",
+    "NAME": "ENKAL PHARMACY",
+    "ADDRESS": "AHABA JUNCTION",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Isuikwuato",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 100,
+    "HCP CODE": "AB/0130",
+    "NAME": "EVANGEL HOSPITAL",
+    "ADDRESS": "2 NWEKE /7 NWAORURUAKU STR, UMUNGASI",
+    "TYPE OF SERVICE": "O & G",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 101,
+    "HCP CODE": "AB/0131",
+    "NAME": "GROUP INT. MEDICAL PRACTICE",
+    "ADDRESS": "1 EMUCHAY CLOSE OFF AZUKA DRIVE OGBO HILL ABA",
+    "TYPE OF SERVICE": "Internal medicine",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 102,
+    "HCP CODE": "AB/0133",
+    "NAME": "MARIST PHARMACY",
+    "ADDRESS": "4 JUBILEE RD, ABA",
+    "TYPE OF SERVICE": "PHARMACY",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 103,
+    "HCP CODE": "AB/0135",
+    "NAME": "MORE HEALTH PHARMACY",
+    "ADDRESS": "37 JUBILEE RD, ABA",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 104,
+    "HCP CODE": "AB/0136",
+    "NAME": "Niger Optical Services Ltd",
+    "ADDRESS": "12 BENDE RD,UMUAHIA",
+    "TYPE OF SERVICE": "Opthalmology",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 105,
+    "HCP CODE": "AB/0137",
+    "NAME": "NOCCKINS PHARMACY & STORES",
+    "ADDRESS": "15 OBOWO/UZUAKOLI UMUAHIA",
+    "TYPE OF SERVICE": "Pharmacy",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 106,
+    "HCP CODE": "AB/0138",
+    "NAME": "ORIBIS HOSPITAL",
+    "ADDRESS": "25 UMUOJIMA ST/MCC RD, ABAYI",
+    "TYPE OF SERVICE": "O & G,SURGERY",
+    "LGA": "Osisioma",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 107,
+    "HCP CODE": "AB/0139",
+    "NAME": "ST. ANTHONY's HOSPITAL",
+    "ADDRESS": "62-80 ETCHE RD, ABA",
+    "TYPE OF SERVICE": "O & G, Dental, OPTHALMOLOGY",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 108,
+    "HCP CODE": "AB/0140",
+    "NAME": "ST. MICHAEL'S HOSPITAL",
+    "ADDRESS": "PLOT 25 ONYEMAOBI L/OUT UMUAHIA",
+    "TYPE OF SERVICE": "O & G",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 109,
+    "HCP CODE": "AB/0141",
+    "NAME": "SUNSHINE HOSPITAL",
+    "ADDRESS": "KM 1 IKOT EKPENE RD, UMUAHIA",
+    "TYPE OF SERVICE": "O & G",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 110,
+    "HCP CODE": "AB/0143",
+    "NAME": "TRUVISION LTD (EYE CARE CENTRE)",
+    "ADDRESS": "2 AZIKIWE STR. UMUAHIA",
+    "TYPE OF SERVICE": "Opthalmology",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 111,
+    "HCP CODE": "AB/0144",
+    "NAME": "Dan-Eunice Cinics",
+    "ADDRESS": "1 Club Road, Umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 112,
+    "HCP CODE": "AB/0145",
+    "NAME": "Michael Okpara University of Agriculture Medical Centre",
+    "ADDRESS": "Umudike,",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 113,
+    "HCP CODE": "AB/0147",
+    "NAME": "Obioma Hospital & Maternity",
+    "ADDRESS": "21, School Road, Umuahia",
+    "TYPE OF SERVICE": "Laboratory",
+    "LGA": "Aba North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 114,
+    "HCP CODE": "AB/0149",
+    "NAME": "J Medi - Care Hospital",
+    "ADDRESS": "73 Bonny Street Umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 115,
+    "HCP CODE": "AB/0150",
+    "NAME": "Chukwuebuka Hospital",
+    "ADDRESS": "50 School Road, Umuahia",
+    "TYPE OF SERVICE": "",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 116,
+    "HCP CODE": "AB/0151",
+    "NAME": "Spring Clinic",
+    "ADDRESS": "18 Scotland Crescent, Aba",
+    "TYPE OF SERVICE": "Laboratory, Optometry",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 117,
+    "HCP CODE": "AB/0152",
+    "NAME": "The Nazareth Clinics",
+    "ADDRESS": "57 Pound Road, Aba. Abia State",
+    "TYPE OF SERVICE": "O&G, Paediatrics",
+    "LGA": "Aba South",
+    "STATE": "Abia"
+  },
+  {
+    "S/N": 118,
+    "HCP CODE": "AB/0153",
+    "NAME": "Ngozi Hospital",
+    "ADDRESS": "2 Isuochi Close, Umuahia",
+    "TYPE OF SERVICE": "General Surgery",
+    "LGA": "Umuahia North",
+    "STATE": "Abia"
+  }
+]

@@ -26,7 +26,15 @@ angular.module('app', [
     .state('home', {
     url: '',
     templateUrl: 'modules/home.html',
-    controller: 'appCtrl'
+    controller: 'appCtrl',
+    resolve: {
+        nhis: ['MockAPI', function(MockAPI){
+            return MockAPI.all('nhis').getList();
+        }],
+        clinics: ['MockAPI', function(MockAPI){
+            return MockAPI.all('hospital').getList();
+        }]
+    },
   })
     .state('article', {
       url: '/:id',
