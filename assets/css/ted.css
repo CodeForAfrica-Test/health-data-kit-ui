@@ -62,6 +62,10 @@
 	margin-top: 200px;
 }
 
+.m-b-o {
+	margin-bottom: 0 !important;
+}
+
 .text-center {
 	text-align: center;
 }
