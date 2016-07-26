@@ -27,6 +27,34 @@ angular.module('app.controllers', [])
           }     
     }
 
+	$scope.showDetail = function(med) {
+		$scope.information = med;
+		$scope.searching = false;
+		$scope.detail = true;
+	}
+
+	$scope.close = function() {
+		$scope.detail = false;
+	}
+})
+
+.controller('medicinePricesCtrl', function($scope, MockAPI) {
+	var inputMin = 1;
+
+    $scope.search = function() {
+    	if ($scope.medicineName && $scope.medicineName.length >= inputMin) {
+    		$scope.searching = true;
+    		MockAPI.all('medicine').getList().then(function(response){
+		        $scope.medicines = _.uniq(response, function(o){
+		         return o.name
+		        });
+		        $scope.unfilteredMedicines = response;
+		    });
+    	} else {
+    		$scope.searching = false;
+    	}
+    }
+
 	$scope.showDetail = function(result) {
 		$scope.information = result;
 		$scope.searching = false;
