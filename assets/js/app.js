@@ -10,8 +10,8 @@ angular.module('app', [
     'ui.gravatar'
 ])
 
-.config(['$stateProvider', '$urlRouterProvider', 'ngDialogProvider', 'RestangularProvider',
-  function($stateProvider, $urlRouterProvider, ngDialogProvider, RestangularProvider) {
+.config(['$stateProvider', '$urlRouterProvider', 'ngDialogProvider', 'RestangularProvider', 'gravatarServiceProvider',
+  function($stateProvider, $urlRouterProvider, ngDialogProvider, RestangularProvider, gravatarServiceProvider) {
   RestangularProvider.setBaseUrl('https://sahara-health-api.herokuapp.com/');
 
   RestangularProvider.addResponseInterceptor(function (data, operation, what, url, response, deferred) {
@@ -41,5 +41,10 @@ angular.module('app', [
       className: 'ngdialog-theme-plain',
       showClose: false,
   });
+
+  gravatarServiceProvider.defaults = {
+      size     : 100,
+      "default": 'mm'  // Mystery man as default for missing avatars
+  };
   
 }]);
