@@ -46,10 +46,14 @@
 					<p>{{information.specialization}}</p>
 
 					<h5>Address</h5>
-					<p>{{information.address}}</p>
+					<p>{{information.email}}</p>
 
 					
-					<h6 class="m-t-lg">See photo</h6>
+					<h6 class="m-t-lg" ng-click="showImage()">See photo</h6>
+				</div>
+				<div class="doctorImage animated fadeInUp" ng-show="image">
+					<i class="fa fa-close pull-right clickable" ng-click="closeImage()"></i>
+					<img gravatar-src="information.email" gravatar-size="200">
 				</div>
 			</div>
 

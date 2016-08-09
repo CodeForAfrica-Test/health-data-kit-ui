@@ -33,8 +33,16 @@ angular.module('app.controllers', [])
 		$scope.detail = true;
 	}
 
+	$scope.showImage = function() {
+		$scope.image = true;
+	}
+
 	$scope.close = function() {
 		$scope.detail = false;
+	}
+
+	$scope.closeImage = function() {
+		$scope.image = false;
 	}
 })
 

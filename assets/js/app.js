@@ -6,7 +6,8 @@ angular.module('app', [
     'restangular',
     'ui.bootstrap',
     'ui.paging',
-    'app.controllers'
+    'app.controllers',
+    'ui.gravatar'
 ])
 
 .config(['$stateProvider', '$urlRouterProvider', 'ngDialogProvider', 'RestangularProvider',
