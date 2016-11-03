@@ -110,7 +110,7 @@
 					<div class="input-group">
 						<input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()" required ng-disabled="load">
 						<span class = "input-group-btn">
-							<button class="btn btn-primary" type="button" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
+							<button class="btn btn-grey" type="button" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
 								<span ng-show="!load">Go!</span>
 								<span ng-show="load"><i class="fa fa-spinner fa-spin"></i></span>
 							</button>
@@ -174,7 +174,7 @@
 					<div class="input-group m-t-lg">
 						<input type="text" placeholder="Location" class="input" ng-model="hospital.name" ng-change="search()" required ng-disabled="load">
 						<span class = "input-group-btn">
-							<button class="btn btn-primary" type="button" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
+							<button class="btn btn-grey" type="button" ng-click="showDetail(hospital)" ng-disabled="hospitalFinder.$invalid || load">
 								<span ng-show="!load">Go!</span>
 								<span ng-show="load"><i class="fa fa-spinner fa-spin"></i></span>
 							</button>
@@ -253,6 +253,16 @@
 	<div class="col-md-4 p-t">
 		<p class="clickable"><i class="fa fa-facebook-square"></i><a href="https://web.facebook.com/codefornigeria" target="_blank">Like us on Facebook</a></p>
 		<p class="clickable"><i class="fa fa-twitter-square"></i><a href="https://twitter.com/codefornigeria" target="_blank">Follow us on Twitter</a></p>
+	</div>
+	<div class="col-md-12">
+		<p class="footer-header">Data sources </p>
+		<hr>
+		<ul class="data-sources">
+			<li>Check your Doctor: <a href="https://www.mdcn.gov.ng/"> Medical and Dental Council of Nigeria</a></li>
+			<li>Check Medicine Prices: <a href="http://www.nhis.gov.ng/"> National Health Insurance Scheme</a></li>
+			<li>Find an Hospital: <a href="http://nmis.mdgs.gov.ng/"> Millenium Development Goals</a></li>
+			<li>Find a Pharmacy: <a href="http://www.nigeriapharm.com/"> Nigeria Pharm</a></li>
+		</ul>
 	</div>
 	<div class="col-md-12 partners">
 		<p class="footer-header">Built by  Code for Nigeria, with thought leadership from </p>
