@@ -134,6 +134,65 @@ angular.module('app.controllers', [])
 	}
 })
 
+.controller('pharmacyFinderCtrl', function($scope, Restangular, $http) {
+	$scope.search = function() {
+	    var address = $scope.pharmacy.address
+		var inputMin = 1;
+			
+	    if ($scope.pharmacy.address && $scope.pharmacy.address.length >= inputMin) {
+			$http({
+			    method: 'GET',
+			    url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' +
+			                         address + '&key=AIzaSyCq_hPKdxEybYoangnVh1Fs_ARyjnmdSqs' + '&sensor=false&components=country:NG',
+
+			    transformRequest: function(data, headersGetter) {
+			        var headers = headersGetter();
+
+			        delete headers['Authorization'];
+
+			        return headers;
+			    }
+			}).then(function(results){
+			   	$scope.searching = true;
+			   	$scope.results = results.data.results;
+			})
+	    } else {
+            $scope.searching = false;
+          } 	   
+	    }
+
+	$scope.addLocation = function(result) {
+		$scope.pharmacy.address = result.formatted_address;
+		$scope.pharmacy.latitude = result.geometry.location.lat;
+		$scope.pharmacy.longitude = result.geometry.location.lng;
+		$scope.searching = false;
+	}
+
+	$scope.showDetail = function() {
+		$scope.load = true;
+		Restangular.all('pharmacy/search').post($scope.pharmacy).then(function(response) {
+			$scope.pharmacies = response;
+		}), function(error){
+            $scope.error = error;
+            console.log(error)
+        };
+	}
+
+	$scope.showPharmacy = function(pharmacy) {
+		$scope.pharmacyDetails = true;
+		$scope.pharmacy = pharmacy.obj;
+	}
+
+	$scope.close = function() {
+		$scope.pharmacyDetails = false;
+	}
+
+	$scope.closeList = function() {
+		$scope.pharmacies = [];
+		$scope.load = false;
+	}
+})
+
 .controller('articleCtrl', function($scope, Restangular) {
 	Restangular.all('content').getList().then(function(response) {
 		$scope.articles = response;
