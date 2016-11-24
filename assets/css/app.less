@@ -23,6 +23,13 @@ a {
 	color: inherit;
 }
 
+@mobile: ~"all and (min-width: 320px) and (max-width: 767px)";
+@notmobile: ~"all and (min-width: 767px)";
+@tablet: ~"all and (min-width: 320px) and (max-width: 959px)";
+@custom: ~"all and (min-width: 320px) and (max-width: 1024px)";
+@desktop: ~"all and (min-width: 960px)";
+@bigscreen: ~"all and (min-width: 1240px)";
+
 
 .l-h {
 	line-height: 15px !important;
@@ -514,11 +521,11 @@ hr {
 .footer {
 	width: 100%;
 	height: auto;
-	margin-top: 0;
-	// text-transform: capitalize;
+	float: left;
 	background: #000;
 	color: grey;
 	padding: 50px;
+	padding-top: 100px;
 	padding-left: 10%;
 	padding-right: 10%;
 
@@ -578,4 +585,60 @@ hr {
 		margin-left: 15px;
 		color: #337ab7;
 	}
+}
+
+.contact {
+    background: #383838;
+    padding: 100px 0;
+
+    h1 {
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+
+        @media @mobile {
+            font-size: 1.2em;
+            line-height: 1.3em;
+        }
+
+        br {
+            @media @mobile {
+                display: none;
+            }
+        }
+    }
+
+    form {
+        width: 40%;
+        max-width: 800px;
+        border: 1px dashed #999999;
+        padding: 50px;
+        margin: 50px auto;
+        margin-bottom: 0;
+        @media @mobile {
+            width: 90%;
+            padding: 20px;
+        }
+        input {
+            border: 0;
+            width: 100%;
+            padding: 15px 0;
+            margin-bottom: 15px;
+            background: none;
+            border-bottom: 2px solid #999999;
+            outline: none;
+            color: white;
+        }
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 0;
+            border-bottom: 2px solid #999999;
+            background: none;
+            border-top: 0;
+            color: white;
+            outline: none;
+        }
+    }
 }
