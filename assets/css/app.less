@@ -157,7 +157,7 @@ hr {
 	min-height: 200px;
 	position: relative;
 	text-align: center;
-	z-index: 1;
+	// z-index: 1;
 	background: none;
 
 	.header {
@@ -588,7 +588,7 @@ hr {
 }
 
 .contact {
-    background: #383838;
+    background: #000000;
     padding: 100px 0;
 
     h1 {
@@ -657,4 +657,50 @@ hr {
             outline: none;
         }
     }
+}
+
+.embed-link {
+	margin: 50px auto;
+	text-align: center;
+	font-weight: 600;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.overlay {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999999990000000;
+	background: rgba(0, 0, 0, 0.5);
+
+	.card {
+		width: 25%;
+		padding: 30px;
+		background: white;
+		margin: 100px auto;
+		border-radius: 3px;
+		text-align: center;
+
+		textarea {
+			width: 100%;
+			height: 100px;
+			outline: none;
+		}
+
+		h3 {
+			margin: 0 !important;
+			margin-bottom: 11px !important;
+			color: #333333;
+		}
+
+		p {
+			line-height: normal;
+		}
+	}
 }

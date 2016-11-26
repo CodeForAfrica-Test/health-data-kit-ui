@@ -1,6 +1,13 @@
 angular.module('app.controllers', [])
   
-.controller('appCtrl', function($scope, Restangular) {})
+.controller('appCtrl', function($scope, Restangular) {
+	$scope.embed = function() {
+		$scope.showCard = true;
+	}
+	$scope.closeCard = function() {
+		$scope.showCard = false;
+	}
+})
 
 .factory('MockAPI', ['Restangular', function(Restangular) {
     return Restangular.withConfig(function(RestangularConfigurer) {

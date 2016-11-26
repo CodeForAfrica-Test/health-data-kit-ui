@@ -205,6 +205,20 @@
 		</div>
 	</div>
 
+	<div ng-controller="appCtrl">
+		<p class="embed-link" ng-click="embed()">Embed kit</p>
+		<div class="overlay animated fadeIn" ng-show="showCard">
+			<div class="card">
+				<h3>Embed the kit on your website</h3>
+				<p>Copy and paste the following code inside within <br> HTML code</p>
+				<textarea cols="10" rows="1">
+					<iframe src="http://premium-times-hdk.herokuapp.com/" frameborder="0" width="100%"></iframe>
+				</textarea>
+				<button class="btn btn-grey" ng-click="closeCard()">Close</button>
+			</div>
+		</div>
+	</div>
+
 	<div class="row m-t-xxl" ng-controller="articleCtrl">
 		<div class="col-md-6 news-card" ng-repeat="article in articles">
 			<div class="thumbnail-img" style="background-image: url('https://images.unsplash.com/photo-1459933083533-46381576caa9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=da36025d1fb02fa6334ee25dae130277');"></div>
