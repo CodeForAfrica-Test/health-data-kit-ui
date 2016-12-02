@@ -116,6 +116,7 @@
 							</button>
 						</span>
 					</div>
+					<p class="text-center m-t-md no-pharmacy" ng-if="nodata">No hospital found</p>
 					<div class="col-md-10 result m-t no-padder" ng-show="searching">
 						<li ng-repeat="result in results" ng-click="addLocation(result)">
 							{{result.formatted_address}}
@@ -180,6 +181,7 @@
 							</button>
 						</span>
 					</div>
+					<p class="text-center m-t-md no-pharmacy" ng-if="nodata">No pharmacy found</p>
 					<div class="col-md-10 result m-t no-padder" ng-show="searching">
 						<li ng-repeat="result in results" ng-click="addLocation(result)">
 							{{result.formatted_address}}

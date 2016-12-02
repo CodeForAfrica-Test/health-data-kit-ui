@@ -118,7 +118,13 @@ angular.module('app.controllers', [])
 	$scope.showDetail = function() {
 		$scope.load = true;
 		Restangular.all('hospital/search').post($scope.hospital).then(function(response) {
-			$scope.hospitals = response;
+			if (response = "null") {
+				$scope.nodata = true;
+				$scope.load = false;
+			} else {
+				$scope.hospitals = response;
+				$scope.nodata = false;
+			}
 		}), function(error){
             $scope.error = error;
             console.log(error)
@@ -178,7 +184,14 @@ angular.module('app.controllers', [])
 	$scope.showDetail = function() {
 		$scope.load = true;
 		Restangular.all('pharmacy/search').post($scope.pharmacy).then(function(response) {
-			$scope.pharmacies = response;
+			if (response = "null") {
+				$scope.nodata = true;
+				$scope.load = false;
+			} else {
+				$scope.pharmacies = response;
+				$scope.nodata = false;
+			}
+			// console.log(response.plain());
 		}), function(error){
             $scope.error = error;
             console.log(error)
