@@ -118,7 +118,8 @@ angular.module('app.controllers', [])
 	$scope.showDetail = function() {
 		$scope.load = true;
 		Restangular.all('hospital/search').post($scope.hospital).then(function(response) {
-			if (response = "null") {
+			console.log(response);
+			if (response == null) {
 				$scope.nodata = true;
 				$scope.load = false;
 			} else {
@@ -184,7 +185,7 @@ angular.module('app.controllers', [])
 	$scope.showDetail = function() {
 		$scope.load = true;
 		Restangular.all('pharmacy/search').post($scope.pharmacy).then(function(response) {
-			if (response = "null") {
+			if (response == null) {
 				$scope.nodata = true;
 				$scope.load = false;
 			} else {
